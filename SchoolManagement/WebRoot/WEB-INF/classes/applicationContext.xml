@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd"
+	xmlns:tx="http://www.springframework.org/schema/tx">
+
+	<bean id="testAction" class="com.action.TestAction"></bean>
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/school_manager?useSSL=false&amp;amp;useUnicode=true&amp;amp;characterEncoding=utf8">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="fixture"></property>
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="show_sql">true</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>./Student.hbm.xml</value>
+				<value>./MedicalTreat.hbm.xml</value>
+				<value>./Finance.hbm.xml</value>
+				<value>./Dormitory.hbm.xml</value>
+				<value>./MClass.hbm.xml</value>
+				<value>./Borrow.hbm.xml</value>
+				<value>./Admin.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<!-- Dao注入 -->
+	<bean id="adminDao" class="com.dao.impl.AdminDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	 </bean>
+	 <bean id="borrowDao" class="com.dao.impl.BorrowDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	 </bean>
+	 <bean id="dormitoryDao" class="com.dao.impl.DormitoryDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	 </bean>
+	 <bean id="financeDao" class="com.dao.impl.FinanceDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	 </bean>
+	 <bean id="classDao" class="com.dao.impl.ClassDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	 </bean>
+	 <bean id="medicalTreatDao" class="com.dao.impl.MedicalTreatDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	 </bean>
+	 <bean id="studentDao" class="com.dao.impl.StudentDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	 </bean>
+	 <!--  service注入 -->
+	 <bean id="adminService" class="com.service.impl.AdminServiceImpl">
+		<property name="adminDao" ref="adminDao"/>
+	 </bean>
+	 <bean id="borrowService" class="com.service.impl.BorrowServiceImpl">
+		<property name="borrowDao" ref="borrowDao"/>
+	 </bean>
+	 <bean id="dormitoryService" class="com.service.impl.DormitoryServiceImpl">
+		<property name="dormitoryDao" ref="dormitoryDao"/>
+	 </bean>
+	 <bean id="financeService" class="com.service.impl.FinanceServiceImpl">
+		<property name="financeDao" ref="financeDao"/>
+	 </bean>
+	 <bean id="classService" class="com.service.impl.ClassServiceImpl">
+		<property name="classDao" ref="classDao"/>
+	 </bean>
+	 <bean id="medicalTreatService" class="com.service.impl.MedicalTreatServiceImpl">
+		<property name="medicalTreatDao" ref="medicalTreatDao"/>
+	 </bean>
+	 <bean id="studentService" class="com.service.impl.StudentServiceImpl">
+		<property name="studentDao" ref="studentDao"/>
+	 </bean>
+</beans>
