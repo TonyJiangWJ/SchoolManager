@@ -13,9 +13,9 @@ public interface BaseService<T extends BaseEntity> {
 	
 	public T findById(Integer id);
 	
-	public List<T> findAll();
+	public List<T> findAll() throws Exception;
 	
 	public void deleteById(Integer id);
 	
-	public List<T> find(T t);
+	public List<T> find(T t) throws Exception;
 }

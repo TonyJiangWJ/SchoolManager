@@ -4,7 +4,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd"
 	xmlns:tx="http://www.springframework.org/schema/tx">
 
-	<bean id="testAction" class="com.action.TestAction"></bean>
+	<bean id="testAction" class="com.action.TestAction">
+		<property name="adminService" ref="adminService"/>
+	</bean>
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="url"
 			value="jdbc:mysql://localhost:3306/school_manager?useSSL=false&amp;amp;useUnicode=true&amp;amp;characterEncoding=utf8">

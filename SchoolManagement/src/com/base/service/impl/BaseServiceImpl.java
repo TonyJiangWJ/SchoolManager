@@ -33,7 +33,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
 	}
 
 	@Override
-	public List<T> findAll() {
+	public List<T> findAll() throws Exception {
 		return getDao().findAll();
 	}
 
@@ -43,7 +43,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
 	}
 
 	@Override
-	public List<T> find(T t) {
+	public List<T> find(T t) throws Exception {
 		// TODO Auto-generated method stub
 		return getDao().find(t);
 	}
