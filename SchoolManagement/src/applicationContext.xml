@@ -90,4 +90,27 @@
 	 <bean id="studentService" class="com.service.impl.StudentServiceImpl">
 		<property name="studentDao" ref="studentDao"/>
 	 </bean>
+	 
+	 <!-- facade注入 -->
+	 <bean id="adminFacade" class="com.facade.impl.AdminFacadeImpl">
+		<property name="adminService" ref="adminService"/>
+	 </bean>
+	 <bean id="borrowFacade" class="com.facade.impl.BorrowFacadeImpl">
+		<property name="borrowService" ref="borrowService"/>
+	 </bean>
+	 <bean id="dormitoryFacade" class="com.facade.impl.DormitoryFacadeImpl">
+		<property name="dormitoryService" ref="dormitoryService"/>
+	 </bean>
+	 <bean id="financeFacade" class="com.facade.impl.FinanceFacadeImpl">
+		<property name="financeService" ref="financeService"/>
+	 </bean>
+	 <bean id="classFacade" class="com.facade.impl.ClassFacadeImpl">
+		<property name="classService" ref="classService"/>
+	 </bean>
+	 <bean id="medicalTreatFacade" class="com.facade.impl.MedicalTreatFacadeImpl">
+		<property name="medicalTreatService" ref="medicalTreatService"/>
+	 </bean>
+	 <bean id="studentFacade" class="com.facade.impl.StudentFacadeImpl">
+		<property name="studentService" ref="studentService"/>
+	 </bean>
 </beans>
