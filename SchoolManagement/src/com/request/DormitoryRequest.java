@@ -1,6 +1,8 @@
 package com.request;
 
-public class DormitoryRequest {
+import com.base.request.BaseRequest;
+
+public class DormitoryRequest extends BaseRequest{
 	private Integer size;
     private String location;
     private String dorNo;

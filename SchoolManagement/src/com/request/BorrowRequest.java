@@ -2,7 +2,9 @@ package com.request;
 
 import java.sql.Timestamp;
 
-public class BorrowRequest {
+import com.base.request.BaseRequest;
+
+public class BorrowRequest extends BaseRequest{
 	private String refStuNo;
     private Timestamp BDate;
     private String BName;
@@ -38,5 +40,6 @@ public class BorrowRequest {
 	public void setBStatus(Integer bStatus) {
 		BStatus = bStatus;
 	}
+	
     
 }

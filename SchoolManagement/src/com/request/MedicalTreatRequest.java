@@ -2,7 +2,9 @@ package com.request;
 
 import java.sql.Timestamp;
 
-public class MedicalTreatRequest {
+import com.base.request.BaseRequest;
+
+public class MedicalTreatRequest extends BaseRequest{
 	private String refStuNo;
     private Timestamp MDate;
     private Double price;

@@ -1,6 +1,8 @@
 package com.request;
 
-public class StudentRequest {
+import com.base.request.BaseRequest;
+
+public class StudentRequest extends BaseRequest{
 	private String name;
     private Integer age;
     private String year;

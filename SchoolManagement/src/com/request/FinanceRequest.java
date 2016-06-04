@@ -1,6 +1,8 @@
 package com.request;
 
-public class FinanceRequest {
+import com.base.request.BaseRequest;
+
+public class FinanceRequest extends BaseRequest{
 	private String refStuNo;
     private Double tuition;
     private Double classMoney;

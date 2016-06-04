@@ -1,6 +1,8 @@
 package com.request;
 
-public class AdminRequest {
+import com.base.request.BaseRequest;
+
+public class AdminRequest extends BaseRequest{
 	private String userName;
     private String password;
     private String newPassword;
