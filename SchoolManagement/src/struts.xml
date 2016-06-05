@@ -14,6 +14,102 @@
 		<action name="resetAction" class="resetAction">
 			<result name="SUCCESS">/admin/resetResult.jsp</result>
 		</action>
+		
+		<action name="deleteBorrowAction" class="deleteBorrowAction">
+			<result name="SUCCESS">/borrow/deleteResult.jsp</result>
+		</action>
+		<action name="insertBorrowAction" class="insertBorrowAction">
+			<result name="SUCCESS">/borrow/insertResult.jsp</result>
+		</action>
+		<action name="listBorrowAction" class="listBorrowAction">
+			<result name="SUCCESS">/borrow/listResult.jsp</result>
+		</action>
+		<action name="searchBorrowAction" class="searchBorrowAction">
+			<result name="SUCCESS">/borrow/searchResult.jsp</result>
+		</action>
+		<action name="updateBorrowAction" class="updateBorrowAction">
+			<result name="SUCCESS">/borrow/deleteResult.jsp</result>
+		</action>
+		
+		<action name="deleteDormitoryAction" class="deleteDormitoryAction">
+			<result name="SUCCESS">/dormitory/deleteResult.jsp</result>
+		</action>
+		<action name="insertDormitoryAction" class="insertDormitoryAction">
+			<result name="SUCCESS">/dormitory/insertResult.jsp</result>
+		</action>
+		<action name="listDormitoryAction" class="listDormitoryAction">
+			<result name="SUCCESS">/dormitory/listResult.jsp</result>
+		</action>
+		<action name="searchDormitoryAction" class="searchDormitoryAction">
+			<result name="SUCCESS">/dormitory/searchResult.jsp</result>
+		</action>
+		<action name="updateDormitoryAction" class="updateDormitoryAction">
+			<result name="SUCCESS">/dormitory/deleteResult.jsp</result>
+		</action>
+		
+		<action name="deleteFinanceAction" class="deleteFinanceAction">
+			<result name="SUCCESS">/finance/deleteResult.jsp</result>
+		</action>
+		<action name="insertFinanceAction" class="insertFinanceAction">
+			<result name="SUCCESS">/finance/insertResult.jsp</result>
+		</action>
+		<action name="listFinanceAction" class="listFinanceAction">
+			<result name="SUCCESS">/finance/listResult.jsp</result>
+		</action>
+		<action name="searchFinanceAction" class="searchFinanceAction">
+			<result name="SUCCESS">/finance/searchResult.jsp</result>
+		</action>
+		<action name="updateFinanceAction" class="updateFinanceAction">
+			<result name="SUCCESS">/finance/deleteResult.jsp</result>
+		</action>
+		
+		<action name="deleteClassAction" class="deleteClassAction">
+			<result name="SUCCESS">/class/deleteResult.jsp</result>
+		</action>
+		<action name="insertClassAction" class="insertClassAction">
+			<result name="SUCCESS">/class/insertResult.jsp</result>
+		</action>
+		<action name="listClassAction" class="listClassAction">
+			<result name="SUCCESS">/class/listResult.jsp</result>
+		</action>
+		<action name="searchClassAction" class="searchClassAction">
+			<result name="SUCCESS">/class/searchResult.jsp</result>
+		</action>
+		<action name="updateClassAction" class="updateClassAction">
+			<result name="SUCCESS">/class/deleteResult.jsp</result>
+		</action>
+		
+		<action name="deleteMedicalTreatAction" class="deleteMedicalTreatAction">
+			<result name="SUCCESS">/medicalTreat/deleteResult.jsp</result>
+		</action>
+		<action name="insertMedicalTreatAction" class="insertMedicalTreatAction">
+			<result name="SUCCESS">/medicalTreat/insertResult.jsp</result>
+		</action>
+		<action name="listMedicalTreatAction" class="listMedicalTreatAction">
+			<result name="SUCCESS">/medicalTreat/listResult.jsp</result>
+		</action>
+		<action name="searchMedicalTreatAction" class="searchMedicalTreatAction">
+			<result name="SUCCESS">/medicalTreat/searchResult.jsp</result>
+		</action>
+		<action name="updateMedicalTreatAction" class="updateMedicalTreatAction">
+			<result name="SUCCESS">/medicalTreat/deleteResult.jsp</result>
+		</action>
+		
+		<action name="deleteStudentAction" class="deleteStudentAction">
+			<result name="SUCCESS">/student/deleteResult.jsp</result>
+		</action>
+		<action name="insertStudentAction" class="insertStudentAction">
+			<result name="SUCCESS">/student/insertResult.jsp</result>
+		</action>
+		<action name="listStudentAction" class="listStudentAction">
+			<result name="SUCCESS">/student/listResult.jsp</result>
+		</action>
+		<action name="searchStudentAction" class="searchStudentAction">
+			<result name="SUCCESS">/student/searchResult.jsp</result>
+		</action>
+		<action name="updateStudentAction" class="updateStudentAction">
+			<result name="SUCCESS">/student/deleteResult.jsp</result>
+		</action>
 	</package>
 	
 </struts>    
