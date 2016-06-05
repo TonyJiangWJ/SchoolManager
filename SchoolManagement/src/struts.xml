@@ -5,5 +5,15 @@
 		<action name="testAction" class="testAction">
 			<result name="SUCCESS">/success.jsp</result>
 		</action>
+		<action name="loginAction" class="loginAction">
+			<result name="SUCCESS">/admin/loginResult.jsp</result>
+		</action>
+		<action name="registerAction" class="registerAction">
+			<result name="SUCCESS">/admin/registerResult.jsp</result>
+		</action>
+		<action name="resetAction" class="resetAction">
+			<result name="SUCCESS">/admin/resetResult.jsp</result>
+		</action>
 	</package>
+	
 </struts>    

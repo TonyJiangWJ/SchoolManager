@@ -4,12 +4,118 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd"
 	xmlns:tx="http://www.springframework.org/schema/tx">
 
+	<!-- Action注入 -->
+	<bean id="loginAction" class="com.action.admin.LoginAction">
+		<property name="adminFacade" ref="adminFacade"/>
+	</bean>
+	<bean id="registerAction" class="com.action.admin.RegisterAction">
+		<property name="adminFacade" ref="adminFacade"/>
+	</bean>
+	<bean id="resetAction" class = "com.action.admin.ResetAction">
+		<property name="adminFacade" ref="adminFacade"/>
+	</bean>
+	
+	<bean id="deleteBorrowAction" class="com.action.borrow.DeleteBorrowAction">
+		<property name="borrowFacade" ref="borrowFacade"/>
+	</bean>
+	<bean id="insertBorrowAction" class="com.action.borrow.InsertBorrowAction">
+		<property name="borrowFacade" ref="borrowFacade"/>
+	</bean>
+	<bean id="listBorrowAction" class="com.action.borrow.ListBorrowAction">
+		<property name="borrowFacade" ref="borrowFacade"/>
+	</bean>
+	<bean id="searchBorrowAction" class="com.action.borrow.SearchBorrowAction">
+		<property name="borrowFacade" ref="borrowFacade"/>
+	</bean>
+	<bean id="updateBorrowAction" class="com.action.borrow.UpdateBorrowAction">
+		<property name="borrowFacade" ref="borrowFacade"/>
+	</bean>
+	
+	<bean id="deleteDormitoryAction" class="com.action.dormitory.DeleteDorAction">
+		<property name="dormitoryFacade" ref="dormitoryFacade"/>
+	</bean>
+	<bean id="insertDormitoryAction" class="com.action.dormitory.InsertDorAction">
+		<property name="dormitoryFacade" ref="dormitoryFacade"/>
+	</bean>
+	<bean id="listDormitoryAction" class="com.action.dormitory.ListDorAction">
+		<property name="dormitoryFacade" ref="dormitoryFacade"/>
+	</bean>
+	<bean id="searchDormitoryAction" class="com.action.dormitory.SearchDorAction">
+		<property name="dormitoryFacade" ref="dormitoryFacade"/>
+	</bean>
+	<bean id="updateDormitoryAction" class="com.action.dormitory.UpdateDorAction">
+		<property name="dormitoryFacade" ref="dormitoryFacade"/>
+	</bean>
+		
+	<bean id="deleteFinanceAction" class="com.action.finance.DeleteFinanceAction">
+		<property name="financeFacade" ref="financeFacade"/>
+	</bean>
+	<bean id="insertFinanceAction" class="com.action.finance.InsertFinanceAction">
+		<property name="financeFacade" ref="financeFacade"/>
+	</bean>
+	<bean id="listFinanceAction" class="com.action.finance.ListFinanceAction">
+		<property name="financeFacade" ref="financeFacade"/>
+	</bean>
+	<bean id="searchFinanceAction" class="com.action.finance.SearchFinanceAction">
+		<property name="financeFacade" ref="financeFacade"/>
+	</bean>
+	<bean id="updateFinanceAction" class="com.action.finance.UpdateFinanceAction">
+		<property name="financeFacade" ref="financeFacade"/>
+	</bean>
+		
+	<bean id="deleteClassAction" class="com.action.mclass.DeleteClassAction">
+		<property name="classFacade" ref="classFacade"/>
+	</bean>
+	<bean id="insertClassAction" class="com.action.mclass.InsertClassAction">
+		<property name="classFacade" ref="classFacade"/>
+	</bean>
+	<bean id="listClassAction" class="com.action.mclass.ListClassAction">
+		<property name="classFacade" ref="classFacade"/>
+	</bean>
+	<bean id="searchClassAction" class="com.action.mclass.SearchClassAction">
+		<property name="classFacade" ref="classFacade"/>
+	</bean>
+	<bean id="updateClassAction" class="com.action.mclass.UpdateClassAction">
+		<property name="classFacade" ref="classFacade"/>
+	</bean>
+		
+	<bean id="deleteMedicalTreatAction" class="com.action.medicaltreat.DeleteMedAction">
+		<property name="medicalTreatFacade" ref="medicalTreatFacade"/>
+	</bean>
+	<bean id="insertMedicalTreatAction" class="com.action.medicaltreat.InsertMedAction">
+		<property name="medicalTreatFacade" ref="medicalTreatFacade"/>
+	</bean>
+	<bean id="listMedicalTreatAction" class="com.action.medicaltreat.ListMedAction">
+		<property name="medicalTreatFacade" ref="medicalTreatFacade"/>
+	</bean>
+	<bean id="searchMedicalTreatAction" class="com.action.medicaltreat.SearchMedAction">
+		<property name="medicalTreatFacade" ref="medicalTreatFacade"/>
+	</bean>
+	<bean id="updateMedicalTreatAction" class="com.action.medicaltreat.UpdateMedAction">
+		<property name="medicalTreatFacade" ref="medicalTreatFacade"/>
+	</bean>
+		
+	<bean id="deleteStudentAction" class="com.action.student.DeleteStudentAction">
+		<property name="studentFacade" ref="studentFacade"/>
+	</bean>
+	<bean id="insertStudentAction" class="com.action.student.InsertStudentAction">
+		<property name="studentFacade" ref="studentFacade"/>
+	</bean>
+	<bean id="listStudentAction" class="com.action.student.ListStudentAction">
+		<property name="studentFacade" ref="studentFacade"/>
+	</bean>
+	<bean id="searchStudentAction" class="com.action.student.SearchStudentAction">
+		<property name="studentFacade" ref="studentFacade"/>
+	</bean>
+	<bean id="updateStudentAction" class="com.action.student.UpdateStudentAction">
+		<property name="studentFacade" ref="studentFacade"/>
+	</bean>
 	<bean id="testAction" class="com.action.TestAction">
 		<property name="adminService" ref="adminService"/>
 	</bean>
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="url"
-			value="jdbc:mysql://localhost:3306/school_manager?useSSL=false&amp;amp;useUnicode=true&amp;amp;characterEncoding=utf8">
+			value="jdbc:mysql://localhost:3306/school_manager?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8">
 		</property>
 		<property name="username" value="root"></property>
 		<property name="password" value="fixture"></property>

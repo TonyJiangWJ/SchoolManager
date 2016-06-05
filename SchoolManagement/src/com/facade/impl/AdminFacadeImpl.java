@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.util.StringUtils;
 
+import com.alibaba.fastjson.JSON;
 import com.base.util.ResultCodeDesc;
 import com.base.util.ResultMessageDesc;
 import com.bean.Admin;
@@ -29,7 +30,10 @@ public class AdminFacadeImpl implements AdminFacade {
 		admin.setUserName(request.getUserName());
 		admin.setPassword(request.getPassword());
 		try {
-			if(adminService.find(admin)!=null){
+			List<Admin> result = adminService.find(admin);
+			if(result != null){
+				System.out.println("登陆成功："+JSON.toJSONString(result));
+				response.setAdmin(result.get(0));
 				response.setResultCode(ResultCodeDesc.SUCCESS);
 				response.setResultMsg(ResultMessageDesc.SUCCESS);
 			}
@@ -56,7 +60,8 @@ public class AdminFacadeImpl implements AdminFacade {
 		Admin admin = new Admin();
 		admin.setUserName(request.getUserName());
 		try {
-			if(adminService.find(admin)!=null){
+			
+			if(adminService.check(admin)){
 				response.setResultCode(ResultCodeDesc.USER_EXISTS);
 				response.setResultCode(ResultMessageDesc.USER_EXISTS);
 				return response;

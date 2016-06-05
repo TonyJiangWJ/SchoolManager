@@ -22,5 +22,11 @@ public class AdminServiceImpl extends BaseServiceImpl<Admin> implements AdminSer
 	public void setAdminDao(AdminDao adminDao) {
 		this.adminDao = adminDao;
 	}
+
+	@Override
+	public boolean check(Admin admin) {
+		// TODO Auto-generated method stub
+		return getAdminDao().check(admin);
+	}
 	
 }

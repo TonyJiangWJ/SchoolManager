@@ -8,4 +8,5 @@ public interface BorrowFacade {
 	public BorrowResponse update(BorrowRequest request);
 	public BorrowResponse insert(BorrowRequest request);
 	public BorrowResponse delete(BorrowRequest request);
+	public BorrowResponse find(BorrowRequest request);
 }

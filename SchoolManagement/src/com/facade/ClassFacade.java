@@ -8,4 +8,5 @@ public interface ClassFacade {
 	public ClassResponse update(ClassRequest request);
 	public ClassResponse insert(ClassRequest request);
 	public ClassResponse delete(ClassRequest request);
+	public ClassResponse find(ClassRequest request);
 }

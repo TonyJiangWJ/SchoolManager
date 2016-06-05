@@ -126,4 +126,29 @@ public class ClassFacadeImpl implements ClassFacade {
 		this.classService = classService;
 	}
 
+	@Override
+	public ClassResponse find(ClassRequest request) {
+		ClassResponse response = new ClassResponse();
+		response.setResultMsg(ResultMessageDesc.ERROR);
+		response.setResultCode(ResultCodeDesc.ERROR);
+		
+		try {
+			MClass t = new MClass();
+			if(!StringUtils.isEmpty(request.getClassName()))
+				t.setClassName(request.getClassName());
+			if(!StringUtils.isEmpty(request.getClassNo()))
+				t.setClassNo(request.getClassNo());
+			if(!StringUtils.isEmpty(request.getGrade()))
+				t.setGrade(request.getGrade());
+			List<MClass> result = classService.find(t);
+			response.setResult(result);
+			response.setResultCode(ResultCodeDesc.SUCCESS);
+			response.setResultMsg(ResultMessageDesc.SUCCESS);
+		} catch (Exception e) {
+			response.setResultCode(ResultCodeDesc.SYSTEM_ERROR);
+			response.setResultMsg(ResultMessageDesc.SYSTEM_ERROR);
+		}
+		return response;
+	}
+
 }

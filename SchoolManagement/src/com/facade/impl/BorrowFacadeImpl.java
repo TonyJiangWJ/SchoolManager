@@ -135,4 +135,31 @@ public class BorrowFacadeImpl implements BorrowFacade {
 		return response;
 	}
 
+	@Override
+	public BorrowResponse find(BorrowRequest request) {
+		BorrowResponse response = new BorrowResponse();
+		response.setResultMsg(ResultMessageDesc.ERROR);
+		response.setResultCode(ResultCodeDesc.ERROR);
+		
+		try {
+			Borrow t = new Borrow();
+			if(!StringUtils.isEmpty(request.getBName()))
+				t.setBName(request.getBName());
+			if(!StringUtils.isEmpty(request.getBStatus()))
+				t.setBStatus(request.getBStatus());
+			if(!StringUtils.isEmpty(request.getBType()))
+				t.setBType(request.getBType());
+			if(!StringUtils.isEmpty(request.getRefStuNo()))
+				t.setRefStuNo(request.getRefStuNo());
+			List<Borrow> result = borrowService.find(t);
+			response.setResult(result);
+			response.setResultCode(ResultCodeDesc.SUCCESS);
+			response.setResultMsg(ResultMessageDesc.SUCCESS);
+		} catch (Exception e) {
+			response.setResultCode(ResultCodeDesc.SYSTEM_ERROR);
+			response.setResultMsg(ResultMessageDesc.SYSTEM_ERROR);
+		}
+		return response;
+	}
+
 }
