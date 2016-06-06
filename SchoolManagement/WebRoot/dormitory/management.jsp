@@ -22,7 +22,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
   
-  <body>
-    This is my JSP page. <br>
+    <body style="text-align:center">
+    <a href="dormitory/insertInput.jsp">添加记录</a><br>
+    <a href="listDormitoryAction.action">查看所有记录</a><br>
+    <a href="dormitory/updateInput.jsp">更新记录</a><br>
+    <a href="dormitory/searchInput.jsp">查找记录</a><br>
   </body>
 </html>

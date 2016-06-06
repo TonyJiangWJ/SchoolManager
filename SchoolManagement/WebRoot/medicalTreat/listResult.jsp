@@ -1,3 +1,6 @@
+<%@page import="com.bean.MedicalTreat"%>
+<%@page import="com.base.util.ResultCodeDesc"%>
+<%@page import="com.response.MedicalTreatResponse"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
@@ -21,8 +24,38 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	-->
 
   </head>
-  
-  <body>
-    This is my JSP page. <br>
-  </body>
+  <%
+	MedicalTreatResponse response2 = (MedicalTreatResponse) request
+			.getAttribute("medicalTreatResponse");
+	if (response2.getResultCode().equals(ResultCodeDesc.SUCCESS)) {
+		List<MedicalTreat> result = response2.getResult();
+%>
+<body style="text-align:center">
+	<table border="1" cellspacing="0" align="center" width="80%">
+		<tr>
+			<td></td>
+			<td>操作1</td>
+			<td>操作2</td>
+		</tr>
+		<%
+			for (int i = 0; i < result.size(); i++) {
+		%>
+		<tr>
+			<td></td>
+			<td><a
+				href="borrow/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
+			<td><a href="deleteBorrowAction?id=<%=result.get(i).getId()%>">删除</a></td>
+		</tr>
+		<%
+			}
+		%>
+	</table>
+	<%
+		} else {
+	%>
+	失败：<%=response2.getResultMsg()%>
+	<%
+		}
+	%>
+</body>
 </html>

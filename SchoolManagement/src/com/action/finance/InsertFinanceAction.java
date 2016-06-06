@@ -12,18 +12,18 @@ import com.response.FinanceResponse;
 public class InsertFinanceAction extends ActionSupport{
 	private FinanceFacade financeFacade;
 	private String refStuNo;
-    private Double tuition;
-    private Double classMoney;
-    private Double houseFee;
+    private String tuition;
+    private String classMoney;
+    private String houseFee;
 	@Override
 	public String execute() throws Exception {
 		Map<String, Object> requestMap = (Map<String, Object>) ActionContext.getContext().get("request");
 		FinanceResponse financeResponse;
 		FinanceRequest request = new FinanceRequest();
-		request.setClassMoney(classMoney);
-		request.setHouseFee(houseFee);
+		request.setClassMoney(Double.valueOf(classMoney));
+		request.setHouseFee(Double.valueOf(houseFee));
 		request.setRefStuNo(refStuNo);
-		request.setTuition(tuition);
+		request.setTuition(Double.valueOf(tuition));
 		financeResponse = financeFacade.insert(request);
 		requestMap.put("financeResponse", financeResponse);
 		return"SUCCESS";
@@ -45,28 +45,29 @@ public class InsertFinanceAction extends ActionSupport{
 		this.refStuNo = refStuNo;
 	}
 
-	public Double getTuition() {
+	public String getTuition() {
 		return tuition;
 	}
 
-	public void setTuition(Double tuition) {
+	public void setTuition(String tuition) {
 		this.tuition = tuition;
 	}
 
-	public Double getClassMoney() {
+	public String getClassMoney() {
 		return classMoney;
 	}
 
-	public void setClassMoney(Double classMoney) {
+	public void setClassMoney(String classMoney) {
 		this.classMoney = classMoney;
 	}
 
-	public Double getHouseFee() {
+	public String getHouseFee() {
 		return houseFee;
 	}
 
-	public void setHouseFee(Double houseFee) {
+	public void setHouseFee(String houseFee) {
 		this.houseFee = houseFee;
 	}
+
 
 }

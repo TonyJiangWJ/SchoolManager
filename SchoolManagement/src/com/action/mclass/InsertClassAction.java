@@ -13,7 +13,7 @@ public class InsertClassAction extends ActionSupport{
 	private ClassFacade classFacade;
 	private String classNo;
     private String className;
-    private Integer studentNum;
+    private String studentNum;
     private String grade;
 	@Override
 	public String execute() throws Exception {
@@ -23,7 +23,7 @@ public class InsertClassAction extends ActionSupport{
 		request.setClassName(className);
 		request.setClassNo(classNo);
 		request.setGrade(grade);
-		request.setStudentNum(studentNum);
+		request.setStudentNum(Integer.valueOf(studentNum));
 		classResponse = classFacade.insert(request);
 		requestMap.put("classResponse", classResponse);
 		return"SUCCESS";
@@ -53,11 +53,13 @@ public class InsertClassAction extends ActionSupport{
 		this.className = className;
 	}
 
-	public Integer getStudentNum() {
+
+
+	public String getStudentNum() {
 		return studentNum;
 	}
 
-	public void setStudentNum(Integer studentNum) {
+	public void setStudentNum(String studentNum) {
 		this.studentNum = studentNum;
 	}
 

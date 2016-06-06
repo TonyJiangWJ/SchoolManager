@@ -12,7 +12,7 @@ import com.response.StudentResponse;
 public class InsertStudentAction extends ActionSupport{
 	private StudentFacade studentFacade;
 	private String name;
-    private Integer age;
+    private String age;
     private String year;
     private String birthPlace;
     private String specialty;
@@ -24,7 +24,7 @@ public class InsertStudentAction extends ActionSupport{
 		Map<String, Object> requestMap = (Map<String, Object>) ActionContext.getContext().get("request");
 		StudentResponse studentResponse;
 		StudentRequest request = new StudentRequest();
-		request.setAge(age);
+		request.setAge(Integer.valueOf(age));
 		request.setBirthPlace(birthPlace);
 		request.setClassNo(classNo);
 		request.setName(name);
@@ -53,11 +53,13 @@ public class InsertStudentAction extends ActionSupport{
 		this.name = name;
 	}
 
-	public Integer getAge() {
+
+
+	public String getAge() {
 		return age;
 	}
 
-	public void setAge(Integer age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 

@@ -11,7 +11,7 @@ import com.response.DormitoryResponse;
 
 public class InsertDorAction extends ActionSupport{
 	private DormitoryFacade dormitoryFacade;
-	private Integer size;
+	private String size;
     private String location;
     private String dorNo;
     private String bedNo;
@@ -25,7 +25,7 @@ public class InsertDorAction extends ActionSupport{
 		request.setDorNo(dorNo);
 		request.setLocation(location);
 		request.setRefStuNo(refStuNo);
-		request.setSize(size);
+		request.setSize(Integer.valueOf(size));
 		dormitoryResponse = dormitoryFacade.insert(request);
 		requestMap.put("dormitoryResponse", dormitoryResponse);
 		return"SUCCESS";
@@ -39,11 +39,13 @@ public class InsertDorAction extends ActionSupport{
 		this.dormitoryFacade = dormitoryFacade;
 	}
 
-	public Integer getSize() {
+
+
+	public String getSize() {
 		return size;
 	}
 
-	public void setSize(Integer size) {
+	public void setSize(String size) {
 		this.size = size;
 	}
 

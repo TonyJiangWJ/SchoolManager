@@ -1,3 +1,6 @@
+<%@page import="com.bean.Borrow"%>
+<%@page import="com.base.util.ResultCodeDesc"%>
+<%@page import="com.response.BorrowResponse"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
@@ -21,8 +24,46 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	-->
 
   </head>
-  
-  <body>
-    This is my JSP page. <br>
-  </body>
+<%
+	BorrowResponse response2 = (BorrowResponse) request
+			.getAttribute("borrowResponse");
+	if (response2.getResultCode().equals(ResultCodeDesc.SUCCESS)) {
+		List<Borrow> result = response2.getResult();
+%>
+<body style="text-align:center">
+	<table border="1" cellspacing="0" align="center" width="80%">
+		<tr>
+			<td>所属学号</td>
+			<td>日期</td>
+			<td>书本名称</td>
+			<td>类型</td>
+			<td>状态</td>
+			<td>操作1</td>
+			<td>操作2</td>
+		</tr>
+		<%
+			for (int i = 0; i < result.size(); i++) {
+		%>
+		<tr>
+			<td><%=result.get(i).getRefStuNo() %></td>
+			<td><%=result.get(i).getBDate()%></td>
+			<td><%=result.get(i).getBName()%></td>
+			<td><%=result.get(i).getBStatus()%></td>
+			<td><%=result.get(i).getBType()%></td>
+			<td><a
+				href="borrow/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
+			<td><a href="deleteBorrowAction?id=<%=result.get(i).getId()%>">删除</a></td>
+		</tr>
+		<%
+			}
+		%>
+	</table>
+	<%
+		} else {
+	%>
+	失败：<%=response2.getResultMsg()%>
+	<%
+		}
+	%>
+</body>
 </html>

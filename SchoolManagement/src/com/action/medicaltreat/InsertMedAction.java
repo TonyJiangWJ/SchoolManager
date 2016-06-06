@@ -14,16 +14,16 @@ public class InsertMedAction extends ActionSupport{
 	private MedicalTreatFacade medicalTreatFacade;
 	private String refStuNo;
     private Timestamp MDate;
-    private Double price;
-    private Integer MType;
+    private String price;
+    private String MType;
 	@Override
 	public String execute() throws Exception {
 		Map<String, Object> requestMap = (Map<String, Object>) ActionContext.getContext().get("request");
 		MedicalTreatResponse medicalTreatResponse;
 		MedicalTreatRequest request = new MedicalTreatRequest();
 		request.setMDate(MDate);
-		request.setMType(MType);
-		request.setPrice(price);
+		request.setMType(Integer.valueOf(MType));
+		request.setPrice(Double.valueOf(price));
 		request.setRefStuNo(refStuNo);
 		medicalTreatResponse = medicalTreatFacade.insert(request);
 		requestMap.put("medicalTreatResponse", medicalTreatResponse);
@@ -54,20 +54,22 @@ public class InsertMedAction extends ActionSupport{
 		MDate = mDate;
 	}
 
-	public Double getPrice() {
+	public String getPrice() {
 		return price;
 	}
 
-	public void setPrice(Double price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 
-	public Integer getMType() {
+	public String getMType() {
 		return MType;
 	}
 
-	public void setMType(Integer mType) {
+	public void setMType(String mType) {
 		MType = mType;
 	}
+
+	
 
 }

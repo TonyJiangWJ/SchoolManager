@@ -22,7 +22,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
   
-  <body>
-    This is my JSP page. <br>
+ <body style="text-align:center">
+    <form action="searchBorrowAction.action" method="POST">
+    	日期：<input name="BDate" type="text"><br>
+    	书名：<input name="BName" type="text"><br>
+    	类型：<input name="BType" type="text"><br>
+    	状态：<input name="BStatus" type="text"><br>
+    	学号：<input name="refStuNo" type="text"><br>
+    	<input type="submit" value="提交"><br/>
+    	<input type="reset" value="重置"><br/>
+    </form>
   </body>
 </html>

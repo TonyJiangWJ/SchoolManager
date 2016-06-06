@@ -1,3 +1,5 @@
+<%@page import="com.base.util.ResultCodeDesc"%>
+<%@page import="com.response.BorrowResponse"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
@@ -21,8 +23,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	-->
 
   </head>
-  
-  <body>
-    This is my JSP page. <br>
-  </body>
+  <%
+	BorrowResponse  response2 = (BorrowResponse) request
+			.getAttribute("borrowResponse");
+	if (response2.getResultCode().equals(ResultCodeDesc.SUCCESS)) {
+%>
+ <body style="text-align:center">
+	插入成功!
+	<%
+	} else {
+%>
+	插入失败：<%=response2.getResultMsg()%>
+</body>
+<%	}
+%>
 </html>

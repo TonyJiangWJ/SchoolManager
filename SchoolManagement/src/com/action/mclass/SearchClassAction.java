@@ -12,7 +12,6 @@ public class SearchClassAction  extends ActionSupport{
 	private ClassFacade classFacade;
 	private String classNo;
     private String className;
-    private Integer studentNum;
     private String grade;
 	@Override
 	public String execute() throws Exception {
@@ -51,13 +50,6 @@ public class SearchClassAction  extends ActionSupport{
 		this.className = className;
 	}
 
-	public Integer getStudentNum() {
-		return studentNum;
-	}
-
-	public void setStudentNum(Integer studentNum) {
-		this.studentNum = studentNum;
-	}
 
 	public String getGrade() {
 		return grade;
