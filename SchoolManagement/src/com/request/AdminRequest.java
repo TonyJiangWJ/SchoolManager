@@ -1,7 +1,11 @@
 package com.request;
 
 import com.base.request.BaseRequest;
-
+/**
+ * 管理员的request信息
+ * @author 沈金番
+ *
+ */
 public class AdminRequest extends BaseRequest{
 	private String userName;
     private String password;

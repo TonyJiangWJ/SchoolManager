@@ -5,7 +5,11 @@ import com.base.service.impl.BaseServiceImpl;
 import com.bean.Borrow;
 import com.dao.BorrowDao;
 import com.service.BorrowService;
-
+/**
+ * 
+ * @author 江文杰
+ *
+ */
 public class BorrowServiceImpl extends BaseServiceImpl<Borrow> implements BorrowService{
 
 	private BorrowDao borrowDao;

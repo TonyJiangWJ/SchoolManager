@@ -5,7 +5,11 @@ import com.base.service.impl.BaseServiceImpl;
 import com.bean.MClass;
 import com.dao.ClassDao;
 import com.service.ClassService;
-
+/**
+ * 
+ * @author 江文杰
+ *
+ */
 public class ClassServiceImpl extends BaseServiceImpl<MClass> implements ClassService{
 
 	private ClassDao classDao;

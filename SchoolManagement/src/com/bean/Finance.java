@@ -3,7 +3,11 @@ package com.bean;
 import com.base.entity.BaseEntity;
 
 
-
+/**
+ * 财务信息
+ * @author 沈金番
+ *
+ */
 public class Finance extends BaseEntity{
 
 

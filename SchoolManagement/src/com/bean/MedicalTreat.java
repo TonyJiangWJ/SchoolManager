@@ -5,7 +5,11 @@ package com.bean;
 import java.sql.Timestamp;
 
 import com.base.entity.BaseEntity;
-
+/**
+ * 医疗记录
+ * @author 沈金番
+ *
+ */
 public class MedicalTreat extends BaseEntity {
 
 	/**

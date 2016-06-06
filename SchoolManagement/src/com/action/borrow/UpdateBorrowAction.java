@@ -9,7 +9,7 @@ import com.request.BorrowRequest;
 import com.response.BorrowResponse;
 /**
  * 更新借阅信息
- * @author 江文杰
+ * @author 沈金番
  *
  */
 public class UpdateBorrowAction extends ActionSupport {
@@ -49,22 +49,6 @@ public class UpdateBorrowAction extends ActionSupport {
 	public void setBName(String bName) {
 		BName = bName;
 	}
-
-//	public Integer getBType() {
-//		return BType;
-//	}
-//
-//	public void setBType(Integer bType) {
-//		BType = bType;
-//	}
-//
-//	public Integer getBStatus() {
-//		return BStatus;
-//	}
-//
-//	public void setBStatus(Integer bStatus) {
-//		BStatus = bStatus;
-//	}
 
 	public String getRefStuNo() {
 		return refStuNo;

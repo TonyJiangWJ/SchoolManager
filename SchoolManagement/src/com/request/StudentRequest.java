@@ -1,7 +1,11 @@
 package com.request;
 
 import com.base.request.BaseRequest;
-
+/**
+ * 学生信息request
+ * @author 沈金番
+ *
+ */
 public class StudentRequest extends BaseRequest{
 	private String name;
     private Integer age;

@@ -11,7 +11,11 @@ import com.facade.ClassFacade;
 import com.request.ClassRequest;
 import com.response.ClassResponse;
 import com.service.ClassService;
-
+/**
+ * 
+ * @author 江文杰
+ *
+ */
 public class ClassFacadeImpl implements ClassFacade {
 	private ClassService classService;
 

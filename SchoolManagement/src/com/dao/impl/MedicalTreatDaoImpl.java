@@ -9,6 +9,12 @@ import com.base.dao.impl.BaseDaoImpl;
 import com.bean.MedicalTreat;
 import com.dao.MedicalTreatDao;
 
+/**
+ * 医疗信息数据库查询、插入、删改操作接口的实现
+ * @author 夏超男
+ *
+ */
+
 public class MedicalTreatDaoImpl extends BaseDaoImpl<MedicalTreat> implements MedicalTreatDao{
 
 	@Override

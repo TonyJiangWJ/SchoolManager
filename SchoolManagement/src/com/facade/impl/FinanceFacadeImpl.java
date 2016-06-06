@@ -11,7 +11,11 @@ import com.facade.FinanceFacade;
 import com.request.FinanceRequest;
 import com.response.FinanceResponse;
 import com.service.FinanceService;
-
+/**
+ * 
+ * @author 江文杰
+ *
+ */
 public class FinanceFacadeImpl implements FinanceFacade {
 	private FinanceService financeService;
 	@Override

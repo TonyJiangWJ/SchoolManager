@@ -5,7 +5,11 @@ import java.sql.Timestamp;
 
 import com.base.entity.BaseEntity;
 
-
+/**
+ * 借阅信息
+ * @author 沈金番
+ *
+ */
 public class Borrow  extends BaseEntity{
 
 

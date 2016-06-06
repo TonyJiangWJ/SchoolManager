@@ -5,7 +5,12 @@ import java.util.List;
 import com.base.dao.BaseDao;
 import com.base.entity.BaseEntity;
 import com.base.service.BaseService;
-
+/**
+ * 抽象基类 实现基类接口的功能
+ * @author tonyjiang
+ *
+ * @param <T>
+ */
 public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseService<T> {
 	
 

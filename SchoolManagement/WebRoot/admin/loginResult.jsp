@@ -26,7 +26,7 @@
 
 </head>
 <body style="text-align:center">
-	This is my LoginResult page.
+
 	<br>
 	<%
 		AdminResponse adminResponse = (AdminResponse) request
@@ -41,6 +41,7 @@
 	账号名或密码错误
 	<%
 		}
-	%>
+	%><br><a href="javascript:history.back(-1)">返回上一页</a><br>
+	<a href="index.jsp">返回首页</a>
 </body>
 </html>

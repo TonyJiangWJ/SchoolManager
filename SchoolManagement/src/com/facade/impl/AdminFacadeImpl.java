@@ -12,7 +12,11 @@ import com.facade.AdminFacade;
 import com.request.AdminRequest;
 import com.response.AdminResponse;
 import com.service.AdminService;
-
+/**
+ * 
+ * @author 江文杰
+ *
+ */
 public class AdminFacadeImpl implements AdminFacade {
 	private AdminService adminService;
 	@Override

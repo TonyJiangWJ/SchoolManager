@@ -7,6 +7,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.StudentRequest;
 import com.response.StudentResponse;
+/**
+ * 删除学生信息
+ * @author 夏超男
+ *
+ */
 
 public class DeleteStudentAction  extends ActionSupport{
 	private StudentFacade studentFacade;

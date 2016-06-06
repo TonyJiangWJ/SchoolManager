@@ -1,5 +1,9 @@
 package com.base.util;
-
+/**
+ * 结果信息的描述
+ * @author 江文杰
+ *
+ */
 public class ResultMessageDesc {
 	public static final String ERROR = "失败";
 	public static final String SUCCESS = "成功";

@@ -3,7 +3,11 @@ package com.bean;
 import com.base.entity.BaseEntity;
 
 // default package
-
+/**
+ * 宿舍信息
+ * @author 沈金番
+ *
+ */
 public class Dormitory extends BaseEntity {
 
 	/**

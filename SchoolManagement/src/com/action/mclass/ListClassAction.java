@@ -6,7 +6,11 @@ import com.facade.ClassFacade;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.response.ClassResponse;
-
+/**
+ * 查看所有的班级信息
+ * @author 江文杰
+ *
+ */
 public class ListClassAction  extends ActionSupport{
 	private ClassFacade classFacade;
 

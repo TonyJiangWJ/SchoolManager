@@ -8,8 +8,8 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.request.FinanceRequest;
 import com.response.FinanceResponse;
 /**
- * 
- * @author tonyjiang
+ * 更新财务信息
+ * @author 江文杰
  *
  */
 public class UpdateFinanceAction extends ActionSupport {

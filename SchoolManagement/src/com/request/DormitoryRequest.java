@@ -1,7 +1,11 @@
 package com.request;
 
 import com.base.request.BaseRequest;
-
+/**
+ * 住宿信息request
+ * @author 沈金番
+ *
+ */
 public class DormitoryRequest extends BaseRequest{
 	private Integer size;
     private String location;

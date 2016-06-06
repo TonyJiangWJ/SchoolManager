@@ -9,6 +9,12 @@ import com.base.dao.impl.BaseDaoImpl;
 import com.bean.Dormitory;
 import com.dao.DormitoryDao;
 
+/**
+ * 宿舍信息数据库查询、插入、删改操作接口的实现
+ * @author 夏超男
+ *
+ */
+
 public class DormitoryDaoImpl extends BaseDaoImpl<Dormitory> implements DormitoryDao{
 
 	@Override

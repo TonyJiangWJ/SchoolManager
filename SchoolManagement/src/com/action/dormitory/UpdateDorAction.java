@@ -9,7 +9,7 @@ import com.request.DormitoryRequest;
 import com.response.DormitoryResponse;
 /**
  * 更新住宿信息
- * @author 江文杰
+ * @author 沈金番
  *
  */
 public class UpdateDorAction  extends ActionSupport {

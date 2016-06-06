@@ -5,7 +5,11 @@ import com.base.service.impl.BaseServiceImpl;
 import com.bean.Dormitory;
 import com.dao.DormitoryDao;
 import com.service.DormitoryService;
-
+/**
+ * 
+ * @author 江文杰
+ *
+ */
 public class DormitoryServiceImpl extends BaseServiceImpl<Dormitory> implements DormitoryService{
 	
 	private DormitoryDao dormitoryDao;

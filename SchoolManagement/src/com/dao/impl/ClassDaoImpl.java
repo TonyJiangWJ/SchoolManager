@@ -9,6 +9,12 @@ import com.base.dao.impl.BaseDaoImpl;
 import com.bean.MClass;
 import com.dao.ClassDao;
 
+/**
+ * 班级信息数据库查询、插入、删改操作接口的实现
+ * @author 夏超男
+ *
+ */
+
 public class ClassDaoImpl extends BaseDaoImpl<MClass> implements ClassDao{
 
 	@Override

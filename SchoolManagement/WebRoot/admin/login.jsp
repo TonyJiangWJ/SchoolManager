@@ -27,6 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		用户名：<input name="userName" type="text"><br>
   		密码：<input name="password" type="password"><br>
   		<input type="submit" value="登陆"><br>
-  	</form>
+  	</form><a href="javascript:history.back(-1)">返回上一页</a><br>
+	<a href="index.jsp">返回首页</a>
   </body>
 </html>

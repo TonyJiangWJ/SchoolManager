@@ -8,7 +8,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.MedicalTreatRequest;
 import com.response.MedicalTreatResponse;
-
+/**
+ * 查找医疗记录
+ * @author 江文杰
+ *
+ */
 public class SearchMedAction  extends ActionSupport{
 	private MedicalTreatFacade medicalTreatFacade;
 	private String refStuNo;

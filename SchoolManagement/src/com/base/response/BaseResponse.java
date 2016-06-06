@@ -2,7 +2,12 @@ package com.base.response;
 
 import java.util.List;
 
-
+/**
+ * Response的基类 包含结果 结果代码 结果描述
+ * @author 江文杰
+ *
+ * @param <T>
+ */
 public class BaseResponse<T> {
 	private List<T> result;
 	private String resultCode;

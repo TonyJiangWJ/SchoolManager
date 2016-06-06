@@ -1,12 +1,14 @@
 package com.bean;
 
 import com.base.entity.BaseEntity;
-
+/**
+ * 班级信息
+ * @author 沈金番
+ *
+ */
 public class MClass extends BaseEntity {
 
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	private String classNo;
 	private String className;

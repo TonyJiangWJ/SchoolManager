@@ -11,15 +11,22 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.base.dao.BaseDao;
 import com.base.entity.BaseEntity;
-
+/**
+ * Dao基类
+ * @author 江文杰
+ * 2016-05-29
+ * @param <T> 泛型
+ */
 @Transactional(readOnly = false)
 public abstract class BaseDaoImpl<T extends BaseEntity> extends
 		HibernateDaoSupport implements BaseDao<T> {
 
+	// 得到子类的类名
 	@SuppressWarnings("unchecked")
 	private Class<T> entityClass = (Class<T>) ((ParameterizedType) getClass()
 			.getGenericSuperclass()).getActualTypeArguments()[0];
-
+	
+	// 插入
 	@Override
 	public void insert(T entity) {
 		// TODO Auto-generated method stub
@@ -32,6 +39,7 @@ public abstract class BaseDaoImpl<T extends BaseEntity> extends
 		}
 	}
 
+	// 更新
 	@Override
 	public void update(T entity) {
 		// TODO Auto-generated method stub
@@ -45,6 +53,7 @@ public abstract class BaseDaoImpl<T extends BaseEntity> extends
 
 	}
 
+	// 删除
 	@Override
 	public void delete(T entity) {
 		// TODO Auto-generated method stub
@@ -56,6 +65,7 @@ public abstract class BaseDaoImpl<T extends BaseEntity> extends
 
 	}
 
+	// 通过Id删除
 	@Override
 	public void deleteById(Integer id) {
 		// TODO Auto-generated method stub
@@ -67,7 +77,7 @@ public abstract class BaseDaoImpl<T extends BaseEntity> extends
 		}
 
 	}
-
+	// 通过id查找
 	@Override
 	public T getById(Integer id) {
 		// TODO Auto-generated method stub
@@ -81,9 +91,11 @@ public abstract class BaseDaoImpl<T extends BaseEntity> extends
 
 	}
 
+	// 抽象方法 查找所有的信息
 	@Override
 	abstract public List<T> findAll() throws Exception;
 
+	// 抽象方法 查找对象
 	@Override
 	abstract public List<T> find(T entity) throws Exception;
 

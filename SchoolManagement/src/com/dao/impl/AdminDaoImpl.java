@@ -12,6 +12,12 @@ import com.base.dao.impl.BaseDaoImpl;
 import com.bean.Admin;
 import com.dao.AdminDao;
 
+/**
+ * 登录功能的数据库查询、插入、删改操作接口的实现
+ * @author 夏超男
+ *
+ */
+
 public class AdminDaoImpl extends BaseDaoImpl<Admin> implements AdminDao{
 	@SuppressWarnings("unchecked")
 	@Override

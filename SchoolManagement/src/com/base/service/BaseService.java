@@ -3,7 +3,12 @@ package com.base.service;
 import java.util.List;
 
 import com.base.entity.BaseEntity;
-
+/**
+ * 基类接口 实现数据操作
+ * @author 江文杰
+ *
+ * @param <T>
+ */
 public interface BaseService<T extends BaseEntity> {
 	public void insert(T t);
 	

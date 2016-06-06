@@ -3,7 +3,11 @@ package com.request;
 import java.sql.Timestamp;
 
 import com.base.request.BaseRequest;
-
+/**
+ * 医疗信息request
+ * @author 沈金番
+ *
+ */
 public class MedicalTreatRequest extends BaseRequest{
 	private String refStuNo;
     private Timestamp MDate;

@@ -9,7 +9,7 @@ import com.request.AdminRequest;
 import com.response.AdminResponse;
 /**
  * 重置密码用
- * @author 江文杰
+ * @author 沈金番
  *
  */
 public class ResetAction extends ActionSupport{

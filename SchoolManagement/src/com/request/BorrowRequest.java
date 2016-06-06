@@ -3,7 +3,11 @@ package com.request;
 import java.sql.Timestamp;
 
 import com.base.request.BaseRequest;
-
+/**
+ * 借阅信息的Request
+ * @author 沈金番
+ *
+ */
 public class BorrowRequest extends BaseRequest{
 	private String refStuNo;
     private Timestamp BDate;

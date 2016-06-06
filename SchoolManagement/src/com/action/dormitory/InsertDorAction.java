@@ -10,7 +10,7 @@ import com.request.DormitoryRequest;
 import com.response.DormitoryResponse;
 /**
  * 插入宿舍信息
- * @author 江文杰
+ * @author 沈金番
  *
  */
 public class InsertDorAction extends ActionSupport{

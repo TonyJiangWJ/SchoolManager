@@ -5,7 +5,11 @@ import com.base.service.impl.BaseServiceImpl;
 import com.bean.MedicalTreat;
 import com.dao.MedicalTreatDao;
 import com.service.MedicalTreatService;
-
+/**
+ * 
+ * @author 江文杰
+ *
+ */
 public class MedicalTreatServiceImpl extends BaseServiceImpl<MedicalTreat> implements MedicalTreatService{
 
 	private MedicalTreatDao medicalTreatDao;

@@ -11,7 +11,11 @@ import com.facade.MedicalTreatFacade;
 import com.request.MedicalTreatRequest;
 import com.response.MedicalTreatResponse;
 import com.service.MedicalTreatService;
-
+/**
+ * 
+ * @author 江文杰
+ *
+ */
 public class MedicalTreatFacadeImpl implements MedicalTreatFacade {
 	private MedicalTreatService medicalTreatService;
 

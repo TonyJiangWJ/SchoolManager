@@ -3,11 +3,14 @@ package com.base.entity;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
+/**
+ * 实体对象的基类 包含id 创建时间 修改时间 版本
+ * @author 江文杰
+ *
+ */
 public class BaseEntity implements Serializable{
 
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	
 	private Integer id;

@@ -9,6 +9,12 @@ import com.base.dao.impl.BaseDaoImpl;
 import com.bean.Borrow;
 import com.dao.BorrowDao;
 
+/**
+ * 借阅功能的数据库查询、插入、删改操作接口的实现
+ * @author 夏超男
+ *
+ */
+
 public class BorrowDaoImpl extends BaseDaoImpl<Borrow> implements BorrowDao{
 
 	@SuppressWarnings("unchecked")

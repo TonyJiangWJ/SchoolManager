@@ -11,7 +11,7 @@ import com.request.BorrowRequest;
 import com.response.BorrowResponse;
 /**
  * 添加借阅信息
- * @author 江文杰
+ * @author 沈金番
  *
  */
 public class InsertBorrowAction extends ActionSupport {

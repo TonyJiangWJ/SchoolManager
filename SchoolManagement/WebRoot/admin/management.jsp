@@ -30,6 +30,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <a href="admin/login.jsp">登陆</a><br>
     <a href="admin/register.jsp">注册</a><br>
     <%} %>
-    
+    <br><a href="javascript:history.back(-1)">返回上一页</a><br>
+	<a href="index.jsp">返回首页</a>
   </body>
 </html>

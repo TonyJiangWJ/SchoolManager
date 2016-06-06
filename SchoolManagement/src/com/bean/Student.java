@@ -2,7 +2,11 @@ package com.bean;
 
 import com.base.entity.BaseEntity;
 
-
+/**
+ * 学生信息
+ * @author 沈金番
+ *
+ */
 public class Student extends BaseEntity{
 
 

@@ -9,7 +9,7 @@ import com.request.BorrowRequest;
 import com.response.BorrowResponse;
 /**
  * 查找借阅信息
- * @author 江文杰
+ * @author 沈金番
  *
  */
 public class SearchBorrowAction extends ActionSupport{

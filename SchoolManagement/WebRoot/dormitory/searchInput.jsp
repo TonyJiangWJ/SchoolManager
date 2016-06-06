@@ -24,7 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
  
 <body style="text-align:center">
-    <form action="SearchtDorction.action" method="POST">
+    <form action="searchtDormitoryAction.action" method="POST">
     	床号：<input name="bedNo" type="text"><br>
     	寝室号：<input name="dorNo" type="text"><br>
     	地址：<select name="location" id="location" >

@@ -28,6 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	密码：<input name="password" type="password"><br>
     	重复密码：<input name="repwd" type="password"><br>
     	<input type="submit" value="注册">
-    </form>
+    </form><br><a href="javascript:history.back(-1)">返回上一页</a><br>
+	<a href="index.jsp">返回首页</a>
   </body>
 </html>

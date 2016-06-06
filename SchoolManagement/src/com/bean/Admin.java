@@ -2,7 +2,11 @@ package com.bean;
 
 import com.base.entity.BaseEntity;
 // default package
-
+/**
+ * 管理员信息
+ * @author 沈金番
+ *
+ */
 public class Admin  extends BaseEntity{
 
 

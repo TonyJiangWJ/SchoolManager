@@ -11,7 +11,7 @@ import com.request.AdminRequest;
 import com.response.AdminResponse;
 /**
  * 注册用
- * @author 江文杰
+ * @author 沈金番
  *
  */
 public class RegisterAction extends ActionSupport{

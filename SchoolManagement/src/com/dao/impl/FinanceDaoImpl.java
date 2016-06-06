@@ -9,6 +9,12 @@ import com.base.dao.impl.BaseDaoImpl;
 import com.bean.Finance;
 import com.dao.FinanceDao;
 
+/**
+ * 财务信息数据库查询、插入、删改操作接口的实现
+ * @author 夏超男
+ *
+ */
+
 public class FinanceDaoImpl extends BaseDaoImpl<Finance> implements FinanceDao{
 
 	@SuppressWarnings("unchecked")

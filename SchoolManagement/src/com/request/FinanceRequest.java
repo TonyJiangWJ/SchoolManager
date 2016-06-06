@@ -1,7 +1,11 @@
 package com.request;
 
 import com.base.request.BaseRequest;
-
+/**
+ * 财务信息request
+ * @author 沈金番
+ *
+ */
 public class FinanceRequest extends BaseRequest{
 	private String refStuNo;
     private Double tuition;

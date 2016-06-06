@@ -11,7 +11,7 @@ import com.request.AdminRequest;
 import com.response.AdminResponse;
 /**
  * 登陆用的Action
- * @author 江文杰
+ * @author 沈金番
  *
  */
 public class LoginAction extends ActionSupport{

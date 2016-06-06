@@ -12,7 +12,11 @@ import com.facade.BorrowFacade;
 import com.request.BorrowRequest;
 import com.response.BorrowResponse;
 import com.service.BorrowService;
-
+/**
+ * 
+ * @author 江文杰
+ *
+ */
 public class BorrowFacadeImpl implements BorrowFacade {
 	private BorrowService borrowService;
 	public BorrowService getBorrowService() {

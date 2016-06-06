@@ -28,6 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	旧密码：<input name="password" type="password"><br>
     	新密码：<input name="newPwd" type="password"><br>
     	<input type="submit" value="提交"><br>
-    </form>
+    </form><br><a href="javascript:history.back(-1)">返回上一页</a><br>
+	<a href="index.jsp">返回首页</a>
   </body>
 </html>

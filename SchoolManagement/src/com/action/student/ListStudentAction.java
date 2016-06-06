@@ -7,6 +7,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.response.StudentResponse;
 
+/**
+ * 查看所有学生信息
+ * @author 夏超男
+ *
+ */
 public class ListStudentAction  extends ActionSupport{
 	private StudentFacade studentFacade;
 

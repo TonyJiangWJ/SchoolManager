@@ -8,6 +8,12 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.request.StudentRequest;
 import com.response.StudentResponse;
 
+/**
+ * 查询指定学生信息
+ * @author 夏超男
+ *
+ */
+
 public class SearchStudentAction  extends ActionSupport{
 	private StudentFacade studentFacade;
 	private String name;

@@ -1,7 +1,11 @@
 package com.request;
 
 import com.base.request.BaseRequest;
-
+/**
+ * 班级信息的request
+ * @author 沈金番
+ *
+ */
 public class ClassRequest extends BaseRequest{
 	private String classNo;
     private String className;

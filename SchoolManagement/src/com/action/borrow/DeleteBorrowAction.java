@@ -9,7 +9,7 @@ import com.request.BorrowRequest;
 import com.response.BorrowResponse;
 /**
  * 删除借阅信息的Action
- * @author 江文杰
+ * @author 沈金番
  *
  */
 public class DeleteBorrowAction extends ActionSupport{

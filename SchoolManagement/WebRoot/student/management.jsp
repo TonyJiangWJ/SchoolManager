@@ -25,7 +25,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    <body style="text-align:center">
     <a href="student/insertInput.jsp">添加记录</a><br>
     <a href="listStudentAction.action">查看所有记录</a><br>
-    <a href="student/updateInput.jsp">更新记录</a><br>
     <a href="student/searchInput.jsp">查找记录</a><br><br>
     	<a href="javascript:history.back(-1)">返回上一页</a><br>
 	<a href="index.jsp">返回首页</a>

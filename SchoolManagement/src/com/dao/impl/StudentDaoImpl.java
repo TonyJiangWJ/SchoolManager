@@ -9,6 +9,12 @@ import com.base.dao.impl.BaseDaoImpl;
 import com.bean.Student;
 import com.dao.StudentDao;
 
+/**
+ * 学生信息数据库查询、插入、删改操作接口的实现
+ * @author 夏超男
+ *
+ */
+
 public class StudentDaoImpl extends BaseDaoImpl<Student> implements StudentDao{
 
 	@Override

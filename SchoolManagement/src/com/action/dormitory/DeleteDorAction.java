@@ -9,7 +9,7 @@ import com.request.DormitoryRequest;
 import com.response.DormitoryResponse;
 /**
  * 删除宿舍信息
- * @author 江文杰
+ * @author 沈金番
  *	2016-6-6
  */
 public class DeleteDorAction  extends ActionSupport{

@@ -8,7 +8,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.ClassRequest;
 import com.response.ClassResponse;
-
+/**
+ * 插入班级信息
+ * @author 江文杰
+ *
+ */
 public class InsertClassAction extends ActionSupport{
 	private ClassFacade classFacade;
 	private String classNo;

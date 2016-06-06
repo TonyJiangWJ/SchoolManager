@@ -7,7 +7,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.ClassRequest;
 import com.response.ClassResponse;
-
+/**
+ * 删除班级信息
+ * @author 江文杰
+ *
+ */
 public class DeleteClassAction  extends ActionSupport{
 	private ClassFacade mClassFacade;
 	private Integer id;

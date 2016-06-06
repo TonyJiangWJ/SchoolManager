@@ -35,6 +35,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	}else{
      %>
      	注册失败，请重试！<%=response2.getResultMsg() %><a href="admin/register.jsp">重新注册</a>
-     <%} %>
+     <%} %><br><a href="javascript:history.back(-1)">返回上一页</a><br>
+	<a href="index.jsp">返回首页</a>
   </body>
 </html>
