@@ -26,13 +26,24 @@
 
 <body style="text-align:center">
 <form action="updateBorrowAction.action" method="POST">
-    	日期：<input name="BDate" type="text"><br>
-    	书名：<input name="BName" type="text"><br>
-    	类型：<input name="BType" type="text"><br>
-    	状态：<input name="BStatus" type="text"><br>
-    	学号：<input name="refStuNo" type="text"><br>
-    	<input type="submit" value="提交"><br/>
-    	<input type="reset" value="重置"><br/>
-    </form>
+	<input name="id" type="hidden" value="<%=request.getAttribute("id")%>">
+    	书名：<input name="BName" type="text"><br> 类型：<select
+			name="BType" id="BType">
+			<option selected value="1">文艺</option>
+			<option value="2">技术
+				</optioin>
+			<option value="3">教材</option>
+			<option value="4">其他</option>
+		</select><br> 
+		状态：<select name="BStatus" id="BStatus">
+			<option selected value="1">新借</option>
+			<option value="2">已归还</optioin>
+		</select><br> 学号：<input name="refStuNo" type="text"><br> <input
+			type="submit" value="提交"><br /> <input type="reset"
+			value="重置"><br />
+	</form>
+    <a href="borrow/management.jsp">返回管理页面</a>
+	<a href="javascript:history.back(-1)">返回上一页</a>
+	<a href="index.jsp">返回首页</a>
   </body>
 </html>

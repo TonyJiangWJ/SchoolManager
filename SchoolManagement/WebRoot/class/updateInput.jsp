@@ -22,7 +22,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
   
-  <body>
-    This is my JSP page. <br>
+<body style="text-align:center">
+<form action="updateClassAction.action" method="POST">
+<input name="id" type="hidden" value="<%=request.getAttribute("id") %>">
+    	班级名称：<input name="className" type="text"><br>
+    	班级号：<input name="classNo" type="text"><br>
+    	年级：<select name="grade" id="grade" >
+    					<option selected value="大一">大一</option>
+    					<option value="大二">大二</optioin>
+    					<option value = "大三">大三</option>
+    					<option value="大四">大四</option>
+    				</select><br>
+		学生人数：<input name="studentNum" type="text"><br>
+
+    	<input type="submit" value="提交"><br/>
+    	<input type="reset" value="重置"><br/>
+    </form>
+       <a href="class/management.jsp">返回管理页面</a>
+       	<a href="javascript:history.back(-1)">返回上一页</a>
+	<a href="index.jsp">返回首页</a>
   </body>
 </html>

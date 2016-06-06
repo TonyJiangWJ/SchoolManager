@@ -24,6 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
  <body style="text-align:center">
     <form action="insertBorrowAction.action" method="POST">
+    <input type="hidden" name="id" value="<%=request.getAttribute("id")%>">
     	学号：<input name="refStuNo" type="text"><br>
 		价格：<input name="price" type="text"><br>
 		类型：<select name="MType">
@@ -35,6 +36,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</select>
     	<input type="submit" value="提交"><br/>
     	<input type="reset" value="重置"><br/>
-    </form>
+    </form><br>
+    	<a href="javascript:history.back(-1)">返回上一页</a><br>
+	<a href="index.jsp">返回首页</a>
   </body>
 </html>

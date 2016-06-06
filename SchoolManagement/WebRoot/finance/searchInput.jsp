@@ -31,5 +31,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<input type="submit" value="提交"><br/>
     	<input type="reset" value="重置"><br/>
     </form>
+    <br>
+    	<a href="javascript:history.back(-1)">返回上一页</a><br>
+	<a href="index.jsp">返回首页</a>
   </body>
 </html>

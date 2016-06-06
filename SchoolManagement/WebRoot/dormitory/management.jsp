@@ -26,6 +26,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <a href="dormitory/insertInput.jsp">添加记录</a><br>
     <a href="listDormitoryAction.action">查看所有记录</a><br>
     <a href="dormitory/updateInput.jsp">更新记录</a><br>
-    <a href="dormitory/searchInput.jsp">查找记录</a><br>
+    <a href="dormitory/searchInput.jsp">查找记录</a><br><hr>
+        	<a href="javascript:history.back(-1)">返回上一页</a><br>
+	<a href="index.jsp">返回首页</a>
   </body>
 </html>

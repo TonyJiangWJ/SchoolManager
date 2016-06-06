@@ -20,10 +20,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	-->
   </head>
   
-  <body>
-  	<form action="testAction.action" method="post">
-  		<input type="submit" value="提交"><br>
-  	</form>
-    This is my JSP page. <br>
+  <body style="text-align:center">
+  	<a href="borrow/management.jsp">借书管理</a><br>
+  	<a href="class/management.jsp">班级管理</a><br>
+  	<a href="dormitory/management.jsp">宿舍管理</a><br>
+  	<a href="finance/management.jsp">财务管理</a><br>
+  	<a href="medicalTreat/management.jsp">医疗管理</a><br>
+  	<a href="student/management.jsp">学生管理</a><br>
   </body>
 </html>

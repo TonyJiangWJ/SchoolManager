@@ -40,6 +40,9 @@
 	<%
 		}
 	%>
+	<a href="borrow/management.jsp">返回管理页面</a>
+	<a href="javascript:history.back(-1)">返回上一页</a>
+	<a href="index.jsp">返回首页</a>
 </body>
 
 </html>

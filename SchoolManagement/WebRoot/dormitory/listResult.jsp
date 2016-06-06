@@ -25,27 +25,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
   
-  <%
+
+<body style="text-align:center">
+	<%
 	DormitoryResponse response2 = (DormitoryResponse) request
 			.getAttribute("dormitoryResponse");
 	if (response2.getResultCode().equals(ResultCodeDesc.SUCCESS)) {
-		List<Dormitory> result = response2.getResult();
+	List<Dormitory> result = response2.getResult();
 %>
-<body style="text-align:center">
-	<table border="1" cellspacing="0" align="center" width="80%">
+		<table border="1" cellspacing="0" align="center" width="80%">
 		<tr>
-			<td></td>
-			<td>操作1</td>
-			<td>操作2</td>
+			<td>寝室号</td>
+			<td>床号</td>
+			<td>学号</td>
+			<td>地址</td>
+			<td>创建时间</td>
+			<td>最后一次修改时间</td>
 		</tr>
 		<%
 			for (int i = 0; i < result.size(); i++) {
 		%>
 		<tr>
-			<td></td>
+			<td><%=result.get(i).getDorNo()%></td>
+			<td><%=result.get(i).getBedNo() %></td>
+			<td><%=result.get(i).getRefStuNo() %></td>
+			<td><%=result.get(i).getLocation()%></td>
+			<td><%=result.get(i).getCreateTime()%></td>
+			<td><%=result.get(i).getModifyTime()%></td>
 			<td><a
-				href="borrow/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
-			<td><a href="deleteBorrowAction?id=<%=result.get(i).getId()%>">删除</a></td>
+				href="dormitory/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
+			<td><a href="deleteDorAction?id=<%=result.get(i).getId()%>">删除</a></td>
 		</tr>
 		<%
 			}
@@ -58,5 +67,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<%
 		}
 	%>
-</body>
+<a href="dormitory/management.jsp">返回管理页面</a>
+    	<a href="javascript:history.back(-1)">返回上一页</a>
+	<a href="index.jsp">返回首页</a>
+  </body>
 </html>

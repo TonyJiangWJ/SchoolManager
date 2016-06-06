@@ -1,4 +1,7 @@
+<%@page import="com.bean.MClass"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@page import="com.response.ClassResponse"%>
+<%@page import="com.base.util.ResultCodeDesc"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -22,7 +25,48 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
   
-  <body>
-    This is my JSP page. <br>
-  </body>
+  <body style="text-align:center">
+<%
+	ClassResponse response2 = (ClassResponse) request
+			.getAttribute("classResponse");
+	if (response2.getResultCode().equals(ResultCodeDesc.SUCCESS)) {
+		List<MClass> result = response2.getResult();
+%>
+	<table border="1" cellspacing="0" align="center" width="80%">
+		<tr>
+			<td>班级名称</td>
+			<td>班级号</td>
+			<td>年级</td>
+			<td>学生人数</td>
+			<td>创建时间</td>
+			<td>最后一次修改时间</td>
+		</tr>
+		<%
+			for (int i = 0; i < result.size(); i++) {
+		%>
+		<tr>
+			<td><%=result.get(i).getClassName() %></td>
+			<td><%=result.get(i).getClassNo()%></td>
+			<td><%=result.get(i).getGrade() %></td>
+			<td><%=result.get(i).getStudentNum()%></td>
+			<td><%=result.get(i).getCreateTime()%></td>
+			<td><%=result.get(i).getModifyTime()%></td>
+			<td><a
+				href="class/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
+			<td><a href="deleteClassAction?id=<%=result.get(i).getId()%>">删除</a></td>
+		</tr>
+		<%
+			}
+		%>
+	</table>
+	<%
+		} else {
+	%>
+	失败：<%=response2.getResultMsg()%>
+	<%
+		}
+	%>
+	    	<a href="borrow/management.jsp">返回管理页面</a>
+	    		<a href="javascript:history.back(-1)">返回上一页</a>
+	<a href="index.jsp">返回首页</a>
 </html>

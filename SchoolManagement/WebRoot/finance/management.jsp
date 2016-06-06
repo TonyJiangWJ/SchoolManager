@@ -27,5 +27,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <a href="listFinanceAction.action">查看所有记录</a><br>
     <a href="finance/updateInput.jsp">更新记录</a><br>
     <a href="finance/searchInput.jsp">查找记录</a><br>
+    <br>
+    	<a href="javascript:history.back(-1)">返回上一页</a><br>
+	<a href="index.jsp">返回首页</a>
   </body>
 </html>

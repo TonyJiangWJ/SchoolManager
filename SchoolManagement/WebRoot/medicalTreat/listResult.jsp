@@ -65,6 +65,8 @@
 	失败：<%=response2.getResultMsg()%>
 	<%
 		}
-	%><a href="mediaclTreat/management.jsp">返回管理页面</a>
+	%><a href="mediaclTreat/management.jsp">返回管理页面</a><br>
+    	<a href="javascript:history.back(-1)">返回上一页</a><br>
+	<a href="index.jsp">返回首页</a>
 </body>
 </html>
