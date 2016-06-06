@@ -9,7 +9,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>My JSP 'management.jsp' starting page</title>
+    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -18,15 +19,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+
   </head>
   
   <body style="text-align:center">
-  	<a href="borrow/management.jsp">借书管理</a><br>
-  	<a href="class/management.jsp">班级管理</a><br>
-  	<a href="dormitory/management.jsp">宿舍管理</a><br>
-  	<a href="finance/management.jsp">财务管理</a><br>
-  	<a href="medicalTreat/management.jsp">医疗管理</a><br>
-  	<a href="student/management.jsp">学生管理</a><br>
-  	<a href="admin/management.jsp">账号管理</a>
+  <%if(session.getAttribute("userName")!=null){ %>
+  	已经登陆！<%=session.getAttribute("userName") %><a href="admin/logout.jsp">注销</a>
+  	<br><a href="admin/resetPwd.jsp">重置密码</a><br>
+  <%} else{%>
+    <a href="admin/login.jsp">登陆</a><br>
+    <a href="admin/register.jsp">注册</a><br>
+    <%} %>
+    
   </body>
 </html>
