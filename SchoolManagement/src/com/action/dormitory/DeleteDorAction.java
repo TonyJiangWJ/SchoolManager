@@ -7,7 +7,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.DormitoryRequest;
 import com.response.DormitoryResponse;
-
+/**
+ * 删除宿舍信息
+ * @author 江文杰
+ *	2016-6-6
+ */
 public class DeleteDorAction  extends ActionSupport{
 	private DormitoryFacade dormitoryFacade;
 	private Integer id;

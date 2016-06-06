@@ -6,7 +6,11 @@ import com.facade.FinanceFacade;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.response.FinanceResponse;
-
+/**
+ * 查看所有的财务信息
+ * @author 江文杰
+ *
+ */
 public class ListFinanceAction  extends ActionSupport{
 	private FinanceFacade financeFacade;
 

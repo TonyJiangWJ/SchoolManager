@@ -51,7 +51,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<td><%=result.get(i).getHouseFee() %></td>
 			<td><a
 				href="finance/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
-			<td><a href="deleteFinanceAction?id=<%=result.get(i).getId()%>">删除</a></td>
+			<td><a href="deleteFinanceAction.action?id=<%=result.get(i).getId()%>">删除</a></td>
 		</tr>
 		<%
 			}

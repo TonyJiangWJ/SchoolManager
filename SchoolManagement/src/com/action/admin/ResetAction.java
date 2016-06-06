@@ -7,7 +7,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.AdminRequest;
 import com.response.AdminResponse;
-
+/**
+ * 重置密码用
+ * @author 江文杰
+ *
+ */
 public class ResetAction extends ActionSupport{
 	private AdminFacade adminFacade;
 	private String userName;
@@ -15,7 +19,7 @@ public class ResetAction extends ActionSupport{
 	private String newPwd;
 	
 	public String execute(){
-		
+		//用于存放返回的Response信息  传到JSP页面
 		Map<String, Object> requestMap = (Map<String, Object>) ActionContext.getContext().get("request");
 		AdminRequest request = new AdminRequest();
 		request.setNewPassword(newPwd);

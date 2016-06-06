@@ -54,7 +54,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<td><%=result.get(i).getModifyTime()%></td>
 			<td><a
 				href="dormitory/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
-			<td><a href="deleteDorAction?id=<%=result.get(i).getId()%>">删除</a></td>
+			<td><a href="deleteDorAction.action?id=<%=result.get(i).getId()%>">删除</a></td>
 		</tr>
 		<%
 			}

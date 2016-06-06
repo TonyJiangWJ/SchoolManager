@@ -7,13 +7,18 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.BorrowRequest;
 import com.response.BorrowResponse;
-
+/**
+ * 更新借阅信息
+ * @author 江文杰
+ *
+ */
 public class UpdateBorrowAction extends ActionSupport {
 	private BorrowFacade borrowFacade;
 	private String BName;
 	private String BType;
 	private String BStatus;
 	private String refStuNo;
+	private String id;
 	@Override
 	public String execute() throws Exception {
 		Map<String, Object> requestMap = (Map<String, Object>) ActionContext.getContext().get("request");
@@ -23,6 +28,7 @@ public class UpdateBorrowAction extends ActionSupport {
 		request.setBStatus(Integer.valueOf(BStatus));
 		request.setBType(Integer.valueOf(BType));
 		request.setRefStuNo(refStuNo);
+		request.setId(Integer.valueOf(id));
 		borrowResponse = borrowFacade.update(request);
 		requestMap.put("borrowResponse", borrowResponse);
 		return"SUCCESS";
@@ -83,4 +89,13 @@ public class UpdateBorrowAction extends ActionSupport {
 	public void setRefStuNo(String refStuNo) {
 		this.refStuNo = refStuNo;
 	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+	
 }

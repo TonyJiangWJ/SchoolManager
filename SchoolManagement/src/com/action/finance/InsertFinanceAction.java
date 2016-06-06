@@ -8,7 +8,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.FinanceRequest;
 import com.response.FinanceResponse;
-
+/**
+ * 插入财务信息
+ * @author 江文杰
+ *
+ */
 public class InsertFinanceAction extends ActionSupport{
 	private FinanceFacade financeFacade;
 	private String refStuNo;

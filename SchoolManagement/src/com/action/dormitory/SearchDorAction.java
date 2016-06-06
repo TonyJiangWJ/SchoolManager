@@ -7,7 +7,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.DormitoryRequest;
 import com.response.DormitoryResponse;
-
+/**
+ * 查询住宿信息
+ * @author 江文杰
+ *
+ */
 public class SearchDorAction extends ActionSupport{
 	private DormitoryFacade dormitoryFacade;
 	private String size;

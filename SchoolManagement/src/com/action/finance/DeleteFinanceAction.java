@@ -7,7 +7,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.FinanceRequest;
 import com.response.FinanceResponse;
-
+/**
+ * 删除财务信息
+ * @author 江文杰
+ *
+ */
 public class DeleteFinanceAction  extends ActionSupport{
 	private FinanceFacade financeFacade;
 	private Integer id;

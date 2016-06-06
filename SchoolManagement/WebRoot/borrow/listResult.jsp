@@ -51,11 +51,11 @@
 			<td><%=result.get(i).getRefStuNo()%></td>
 			<td><%=result.get(i).getBDate()%></td>
 			<td><%=result.get(i).getBName()%></td>
-			<td><%=result.get(i).getBStatus()%></td>
 			<td><%=result.get(i).getBType()%></td>
+			<td><%=result.get(i).getBStatus()%></td>
 			<td><a
 				href="borrow/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
-			<td><a href="deleteBorrowAction?id=<%=result.get(i).getId()%>">删除</a></td>
+			<td><a href="deleteBorrowAction.action?id=<%=result.get(i).getId()%>">删除</a></td>
 		</tr>
 		<%
 			}

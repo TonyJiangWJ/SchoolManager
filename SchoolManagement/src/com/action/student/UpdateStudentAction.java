@@ -18,6 +18,7 @@ public class UpdateStudentAction extends ActionSupport {
 	private String classNo;
 	private String stuNo;
 	private String sex;
+	private String id;
 
 	@Override
 	public String execute() throws Exception {
@@ -33,9 +34,18 @@ public class UpdateStudentAction extends ActionSupport {
 		request.setSpecialty(specialty);
 		request.setStuNo(stuNo);
 		request.setYear(year);
+		request.setId(Integer.valueOf(id));
 		studentResponse = studentFacade.update(request);
 		requestMap.put("studentResponse", studentResponse);
 		return "SUCCESS";
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public StudentFacade getStudentFacade() {

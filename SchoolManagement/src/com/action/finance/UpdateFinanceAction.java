@@ -7,13 +7,18 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.FinanceRequest;
 import com.response.FinanceResponse;
-
+/**
+ * 
+ * @author tonyjiang
+ *
+ */
 public class UpdateFinanceAction extends ActionSupport {
 	private FinanceFacade financeFacade;
 	private String refStuNo;
     private String tuition;
     private String classMoney;
     private String houseFee;
+    private String id;
 	@Override
 	public String execute() throws Exception {
 		Map<String, Object> requestMap = (Map<String, Object>) ActionContext.getContext().get("request");
@@ -23,6 +28,7 @@ public class UpdateFinanceAction extends ActionSupport {
 		request.setHouseFee(Double.valueOf(houseFee));
 		request.setRefStuNo(refStuNo);
 		request.setTuition(Double.valueOf(tuition));
+		request.setId(Integer.valueOf(id));
 		financeResponse = financeFacade.update(request);
 		requestMap.put("financeResponse", financeResponse);
 		return"SUCCESS";
@@ -66,6 +72,14 @@ public class UpdateFinanceAction extends ActionSupport {
 
 	public void setHouseFee(String houseFee) {
 		this.houseFee = houseFee;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 }

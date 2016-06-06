@@ -6,7 +6,11 @@ import com.facade.DormitoryFacade;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.response.DormitoryResponse;
-
+/**
+ * 查看所有宿舍信息
+ * @author 江文杰
+ *
+ */
 public class ListDorAction extends ActionSupport{
 	private DormitoryFacade dormitoryFacade;
 

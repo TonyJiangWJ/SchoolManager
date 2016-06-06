@@ -59,7 +59,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<td><%=result.get(i).getSex() %></td>
 			<td><a
 				href="borrow/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
-			<td><a href="deleteBorrowAction?id=<%=result.get(i).getId()%>">删除</a></td>
+			<td><a href="deleteBorrowAction.action?id=<%=result.get(i).getId()%>">删除</a></td>
 		</tr>
 		<%
 			}

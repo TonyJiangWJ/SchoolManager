@@ -3,7 +3,11 @@ package com.action;
 import com.bean.Admin;
 import com.opensymphony.xwork2.ActionSupport;
 import com.service.AdminService;
-
+/**
+ * 测试用的Action
+ * @author 江文杰
+ *
+ */
 public class TestAction extends ActionSupport{
 
 	private AdminService adminService;

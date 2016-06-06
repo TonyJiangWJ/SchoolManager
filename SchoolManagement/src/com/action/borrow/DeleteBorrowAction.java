@@ -7,16 +7,22 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.BorrowRequest;
 import com.response.BorrowResponse;
-
+/**
+ * 删除借阅信息的Action
+ * @author 江文杰
+ *
+ */
 public class DeleteBorrowAction extends ActionSupport{
 	private BorrowFacade borrowFacade;
-	private Integer id;
+	private String id;
 	@Override
 	public String execute() throws Exception {
+		
 		Map<String, Object> requestMap = (Map<String, Object>) ActionContext.getContext().get("request");
+		
 		BorrowResponse borrowResponse;
 		BorrowRequest request = new BorrowRequest();
-		request.setId(id);
+		request.setId(Integer.valueOf(id));
 		borrowResponse = borrowFacade.delete(request);
 		requestMap.put("borrowResponse", borrowResponse);
 		return"SUCCESS";
@@ -30,12 +36,14 @@ public class DeleteBorrowAction extends ActionSupport{
 		this.borrowFacade = borrowFacade;
 	}
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
+
+
 	
 }

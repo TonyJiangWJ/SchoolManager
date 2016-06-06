@@ -9,7 +9,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.AdminRequest;
 import com.response.AdminResponse;
-
+/**
+ * 注册用
+ * @author 江文杰
+ *
+ */
 public class RegisterAction extends ActionSupport{
 	private Map<String, Object> requestMap;
 	private String password;
@@ -22,6 +26,7 @@ public class RegisterAction extends ActionSupport{
 		request.setUserName(userName);
 		request.setPassword(password);
 		AdminResponse response1 = adminFacade.register(request);
+		//用于存放返回的Response信息  传到JSP页面
 		requestMap = (Map<String, Object>) ActionContext.getContext().get("request");
 		requestMap.put("adminResponse", response1);
 		return "SUCCESS";

@@ -9,7 +9,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.BorrowRequest;
 import com.response.BorrowResponse;
-
+/**
+ * 添加借阅信息
+ * @author 江文杰
+ *
+ */
 public class InsertBorrowAction extends ActionSupport {
 	private BorrowFacade borrowFacade;
 	private Timestamp BDate;

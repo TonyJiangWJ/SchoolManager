@@ -25,6 +25,8 @@
 </head>
 
 <body style="text-align:center">
+<% String id = request.getParameter("id");
+	out.print("id"+id); %>
 <form action="updateBorrowAction.action" method="POST">
 	<input name="id" type="hidden" value="<%=request.getAttribute("id")%>">
     	书名：<input name="BName" type="text"><br> 类型：<select

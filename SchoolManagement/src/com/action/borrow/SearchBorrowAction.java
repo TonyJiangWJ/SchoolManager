@@ -7,7 +7,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.BorrowRequest;
 import com.response.BorrowResponse;
-
+/**
+ * 查找借阅信息
+ * @author 江文杰
+ *
+ */
 public class SearchBorrowAction extends ActionSupport{
 	private BorrowFacade borrowFacade;
 	private String BName;

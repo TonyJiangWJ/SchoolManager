@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.util.StringUtils;
 
+import com.alibaba.fastjson.JSON;
 import com.base.util.ResultCodeDesc;
 import com.base.util.ResultMessageDesc;
 import com.bean.Borrow;
@@ -50,6 +51,7 @@ public class BorrowFacadeImpl implements BorrowFacade {
 		BorrowResponse response = new BorrowResponse();
 		response.setResultCode(ResultCodeDesc.ERROR);
 		response.setResultMsg(ResultMessageDesc.ERROR);
+		System.out.println("update request"+JSON.toJSONString(request));
 		if(StringUtils.isEmpty(request.getId())){
 			response.setResultCode(ResultCodeDesc.PARAMS_ERROR);
 			response.setResultMsg(ResultMessageDesc.PARAMS_ERROR);

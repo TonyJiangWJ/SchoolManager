@@ -9,7 +9,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.AdminRequest;
 import com.response.AdminResponse;
-
+/**
+ * 登陆用的Action
+ * @author 江文杰
+ *
+ */
 public class LoginAction extends ActionSupport{
 	private String userName;
 	private String password;
@@ -19,6 +23,7 @@ public class LoginAction extends ActionSupport{
 		AdminRequest request = new AdminRequest();
 		request.setUserName(userName);
 		request.setPassword(password);
+		//用于存放返回的Response信息  传到JSP页面
 		Map<String, Object> requestMap = (Map<String, Object>) ActionContext.getContext().get("request");  
 		
 		AdminResponse response1 = adminFacade.login(request);

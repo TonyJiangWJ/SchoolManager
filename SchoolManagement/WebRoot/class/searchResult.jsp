@@ -53,7 +53,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<td><%=result.get(i).getModifyTime()%></td>
 			<td><a
 				href="class/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
-			<td><a href="deleteClassAction?id=<%=result.get(i).getId()%>">删除</a></td>
+			<td><a href="deleteClassAction.action?id=<%=result.get(i).getId()%>">删除</a></td>
 		</tr>
 		<%
 			}

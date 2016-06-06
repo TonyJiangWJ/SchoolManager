@@ -8,7 +8,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.request.DormitoryRequest;
 import com.response.DormitoryResponse;
-
+/**
+ * 插入宿舍信息
+ * @author 江文杰
+ *
+ */
 public class InsertDorAction extends ActionSupport{
 	private DormitoryFacade dormitoryFacade;
 	private String size;

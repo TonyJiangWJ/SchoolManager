@@ -14,6 +14,7 @@ public class UpdateClassAction  extends ActionSupport {
     private String className;
     private String studentNum;
     private String grade;
+    private String id;
 	@Override
 	public String execute() throws Exception {
 		Map<String, Object> requestMap = (Map<String, Object>) ActionContext.getContext().get("request");
@@ -22,6 +23,7 @@ public class UpdateClassAction  extends ActionSupport {
 		request.setClassName(className);
 		request.setClassNo(classNo);
 		request.setGrade(grade);
+		request.setId(Integer.valueOf(id));
 		request.setStudentNum(Integer.valueOf(studentNum));
 		classResponse = classFacade.update(request);
 		requestMap.put("classResponse", classResponse);
@@ -52,6 +54,14 @@ public class UpdateClassAction  extends ActionSupport {
 		this.className = className;
 	}
 
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 
 	public String getStudentNum() {
 		return studentNum;

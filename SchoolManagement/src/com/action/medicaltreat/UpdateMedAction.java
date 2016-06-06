@@ -15,6 +15,7 @@ public class UpdateMedAction extends ActionSupport {
     private Timestamp MDate;
     private String price;
     private String MType;
+    private String id;
 	@Override
 	public String execute() throws Exception {
 		Map<String, Object> requestMap = (Map<String, Object>) ActionContext.getContext().get("request");
@@ -24,9 +25,18 @@ public class UpdateMedAction extends ActionSupport {
 		request.setMType(Integer.valueOf(MType));
 		request.setPrice(Double.valueOf(price));
 		request.setRefStuNo(refStuNo);
+		request.setId(Integer.valueOf(id));
 		medicalTreatResponse = medicalTreatFacade.update(request);
 		requestMap.put("medicalTreatResponse", medicalTreatResponse);
 		return"SUCCESS";
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public MedicalTreatFacade getMedicalTreatFacade() {
