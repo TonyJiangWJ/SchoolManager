@@ -24,6 +24,7 @@ public class InsertBorrowAction extends ActionSupport {
 				.getContext().get("request");
 		BorrowResponse borrowResponse;
 		BorrowRequest request = new BorrowRequest();
+		BDate = new Timestamp(System.currentTimeMillis());
 		request.setBDate(BDate);
 		request.setBName(BName);
 		request.setBStatus(Integer.valueOf(BStatus));

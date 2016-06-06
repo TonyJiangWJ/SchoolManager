@@ -22,7 +22,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
   
-  <body>
-    This is my JSP page. <br>
+ <body style="text-align:center">
+    <form action="insertBorrowAction.action" method="POST">
+    	学号：<input name="refStuNo" type="text"><br>
+		价格：<input name="price" type="text"><br>
+		类型：<select name="MType">
+						<option selected value="1">外科</option>
+						<option  value="2">眼科</option>
+						<option value="3">肛肠科</option>
+						<option value="4">皮肤科</option>
+						<option value="5">其他</option>
+					</select>
+    	<input type="submit" value="提交"><br/>
+    	<input type="reset" value="重置"><br/>
+    </form>
   </body>
 </html>

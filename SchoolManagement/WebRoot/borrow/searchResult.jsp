@@ -3,34 +3,37 @@
 <%@page import="com.response.BorrowResponse"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
-    <base href="<%=basePath%>">
-    
-    <title>My JSP 'searchResult.jsp' starting page</title>
-    
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
+<head>
+<base href="<%=basePath%>">
+
+<title>My JSP 'searchResult.jsp' starting page</title>
+
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 
-  </head>
-<%
-	BorrowResponse response2 = (BorrowResponse) request
-			.getAttribute("borrowResponse");
-	if (response2.getResultCode().equals(ResultCodeDesc.SUCCESS)) {
-		List<Borrow> result = response2.getResult();
-%>
+</head>
+
 <body style="text-align:center">
+	<%
+		BorrowResponse response2 = (BorrowResponse) request
+				.getAttribute("borrowResponse");
+		if (response2.getResultCode().equals(ResultCodeDesc.SUCCESS)) {
+			List<Borrow> result = response2.getResult();
+	%>
 	<table border="1" cellspacing="0" align="center" width="80%">
 		<tr>
 			<td>所属学号</td>
@@ -45,7 +48,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			for (int i = 0; i < result.size(); i++) {
 		%>
 		<tr>
-			<td><%=result.get(i).getRefStuNo() %></td>
+			<td><%=result.get(i).getRefStuNo()%></td>
 			<td><%=result.get(i).getBDate()%></td>
 			<td><%=result.get(i).getBName()%></td>
 			<td><%=result.get(i).getBStatus()%></td>
@@ -65,5 +68,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<%
 		}
 	%>
+	<a href="borrow/management.jsp">返回管理页面</a>
 </body>
 </html>

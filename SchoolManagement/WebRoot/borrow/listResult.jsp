@@ -26,13 +26,14 @@
 	-->
 
 </head>
-<%
-	BorrowResponse response2 = (BorrowResponse) request
-			.getAttribute("borrowResponse");
-	if (response2.getResultCode().equals(ResultCodeDesc.SUCCESS)) {
-		List<Borrow> result = response2.getResult();
-%>
+
 <body style="text-align:center">
+	<%
+		BorrowResponse response2 = (BorrowResponse) request
+				.getAttribute("borrowResponse");
+		if (response2.getResultCode().equals(ResultCodeDesc.SUCCESS)) {
+			List<Borrow> result = response2.getResult();
+	%>
 	<table border="1" cellspacing="0" align="center" width="80%">
 		<tr>
 			<td>所属学号</td>
@@ -47,7 +48,7 @@
 			for (int i = 0; i < result.size(); i++) {
 		%>
 		<tr>
-			<td><%=result.get(i).getRefStuNo() %></td>
+			<td><%=result.get(i).getRefStuNo()%></td>
 			<td><%=result.get(i).getBDate()%></td>
 			<td><%=result.get(i).getBName()%></td>
 			<td><%=result.get(i).getBStatus()%></td>

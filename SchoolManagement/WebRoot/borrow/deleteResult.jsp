@@ -25,18 +25,22 @@
 	-->
 
 </head>
-<%
-	BorrowResponse response2 = (BorrowResponse) request
-			.getAttribute("borrowResponse");
-	if (response2.getResultCode().equals(ResultCodeDesc.SUCCESS)) {
-%>
+
 <body style="text-align:center">
+	<%
+		BorrowResponse response2 = (BorrowResponse) request
+				.getAttribute("borrowResponse");
+		if (response2.getResultCode().equals(ResultCodeDesc.SUCCESS)) {
+	%>
 	删除成功!
 	<%
-	} else {
-%>
+		} else {
+	%>
 	删除失败：<%=response2.getResultMsg()%>
+	<%
+		}
+	%>
+	<a href="borrow/management.jsp">返回管理页面</a>
 </body>
-<%	}
-%>
+
 </html>

@@ -21,6 +21,7 @@ public class InsertMedAction extends ActionSupport{
 		Map<String, Object> requestMap = (Map<String, Object>) ActionContext.getContext().get("request");
 		MedicalTreatResponse medicalTreatResponse;
 		MedicalTreatRequest request = new MedicalTreatRequest();
+		MDate = new Timestamp(System.currentTimeMillis());
 		request.setMDate(MDate);
 		request.setMType(Integer.valueOf(MType));
 		request.setPrice(Double.valueOf(price));

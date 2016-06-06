@@ -1,3 +1,5 @@
+<%@page import="com.base.util.ResultCodeDesc"%>
+<%@page import="com.response.MedicalTreatResponse"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
@@ -22,7 +24,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
   
-  <body>
-    This is my JSP page. <br>
-  </body>
+<body style="text-align:center">
+	<%
+		MedicalTreatResponse response2 = (MedicalTreatResponse) request
+				.getAttribute("mediaclTreatResponse");
+		if (response2.getResultCode().equals(ResultCodeDesc.SUCCESS)) {
+	%>
+	删除成功!
+	<%
+		} else {
+	%>
+	删除失败：<%=response2.getResultMsg()%>
+	<%
+		}
+	%>
+	<a href="mediaclTreat/management.jsp">返回管理页面</a>
+</body>
 </html>

@@ -25,7 +25,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body style="text-align:center">
     <form action="insertBorrowAction.action" method="POST">
-    	<input name="BDate" type="hidden" value=<%=new Timestamp(new Date().getTime()) %>><br>
     	书名：<input name="BName" type="text"><br>
     	类型：<select name="BType" id="BType" >
     					<option selected value="1">文艺</option>
