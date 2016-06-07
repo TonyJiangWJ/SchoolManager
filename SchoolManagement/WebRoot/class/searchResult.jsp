@@ -38,8 +38,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<td>班级号</td>
 			<td>年级</td>
 			<td>学生人数</td>
-			<td>创建时间</td>
-			<td>最后一次修改时间</td>
+			<td>操作1</td>
+			<td>操作2</td>
 		</tr>
 		<%
 			for (int i = 0; i < result.size(); i++) {
@@ -49,8 +49,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<td><%=result.get(i).getClassNo()%></td>
 			<td><%=result.get(i).getGrade() %></td>
 			<td><%=result.get(i).getStudentNum()%></td>
-			<td><%=result.get(i).getCreateTime()%></td>
-			<td><%=result.get(i).getModifyTime()%></td>
 			<td><a
 				href="class/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
 			<td><a href="deleteClassAction.action?id=<%=result.get(i).getId()%>">删除</a></td>

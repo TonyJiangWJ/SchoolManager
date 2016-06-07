@@ -34,7 +34,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body style="text-align:center">
 	<table border="1" cellspacing="0" align="center" width="80%">
 		<tr>
-			<td></td>
+			<td>班级名称</td>
+			<td>班级号</td>
+			<td>年级</td>
+			<td>学生人数</td>
 			<td>操作1</td>
 			<td>操作2</td>
 		</tr>
@@ -42,10 +45,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			for (int i = 0; i < result.size(); i++) {
 		%>
 		<tr>
-			<td></td>
+			<td><%=result.get(i).getClassName() %></td>
+			<td><%=result.get(i).getClassNo()%></td>
+			<td><%=result.get(i).getGrade() %></td>
+			<td><%=result.get(i).getStudentNum()%></td>
 			<td><a
-				href="borrow/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
-			<td><a href="deleteBorrowAction.action?id=<%=result.get(i).getId()%>">删除</a></td>
+				href="class/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
+			<td><a href="deleteClassAction.action?id=<%=result.get(i).getId()%>">删除</a></td>
 		</tr>
 		<%
 			}

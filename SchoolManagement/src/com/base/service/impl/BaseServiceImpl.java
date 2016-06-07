@@ -7,7 +7,7 @@ import com.base.entity.BaseEntity;
 import com.base.service.BaseService;
 /**
  * 抽象基类 实现基类接口的功能
- * @author tonyjiang
+ * @author 江文杰
  *
  * @param <T>
  */

@@ -40,7 +40,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<td>学号</td>
 			<td>地址</td>
 			<td>创建时间</td>
-			<td>最后一次修改时间</td>
 		</tr>
 		<%
 			for (int i = 0; i < result.size(); i++) {
@@ -51,7 +50,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<td><%=result.get(i).getRefStuNo() %></td>
 			<td><%=result.get(i).getLocation()%></td>
 			<td><%=result.get(i).getCreateTime()%></td>
-			<td><%=result.get(i).getModifyTime()%></td>
 			<td><a
 				href="dormitory/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
 			<td><a href="deleteDormitoryAction.action?id=<%=result.get(i).getId()%>">删除</a></td>

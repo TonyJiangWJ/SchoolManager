@@ -23,8 +23,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body style="text-align:center">
-  <%if(session.getAttribute("userName")!=null){ %>
-  	已经登陆！<%=session.getAttribute("userName") %><a href="admin/logout.jsp">注销</a>
+  <%if(session.getAttribute("userInfo")!=null){ %>
+  	已经登陆！<%=session.getAttribute("userInfo") %><a href="admin/logout.jsp">注销</a>
   	<br><a href="admin/resetPwd.jsp">重置密码</a><br>
   <%} else{%>
     <a href="admin/login.jsp">登陆</a><br>
