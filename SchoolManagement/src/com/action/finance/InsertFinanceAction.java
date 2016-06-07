@@ -2,6 +2,8 @@ package com.action.finance;
 
 import java.util.Map;
 
+import org.springframework.util.StringUtils;
+
 import com.bean.Finance;
 import com.facade.FinanceFacade;
 import com.opensymphony.xwork2.ActionContext;
@@ -24,10 +26,13 @@ public class InsertFinanceAction extends ActionSupport{
 		Map<String, Object> requestMap = (Map<String, Object>) ActionContext.getContext().get("request");
 		FinanceResponse financeResponse;
 		FinanceRequest request = new FinanceRequest();
-		request.setClassMoney(Double.valueOf(classMoney));
-		request.setHouseFee(Double.valueOf(houseFee));
+		if(!StringUtils.isEmpty(classMoney))
+			request.setClassMoney(Double.valueOf(classMoney));
+		if(!StringUtils.isEmpty(houseFee))
+			request.setHouseFee(Double.valueOf(houseFee));
 		request.setRefStuNo(refStuNo);
-		request.setTuition(Double.valueOf(tuition));
+		if(!StringUtils.isEmpty(tuition))
+			request.setTuition(Double.valueOf(tuition));
 		financeResponse = financeFacade.insert(request);
 		requestMap.put("financeResponse", financeResponse);
 		return"SUCCESS";

@@ -3,6 +3,8 @@ package com.action.medicaltreat;
 import java.sql.Timestamp;
 import java.util.Map;
 
+import org.springframework.util.StringUtils;
+
 import com.bean.MedicalTreat;
 import com.facade.MedicalTreatFacade;
 import com.opensymphony.xwork2.ActionContext;
@@ -23,8 +25,10 @@ public class InsertMedAction extends ActionSupport{
 		MedicalTreatRequest request = new MedicalTreatRequest();
 		MDate = new Timestamp(System.currentTimeMillis());
 		request.setMDate(MDate);
-		request.setMType(Integer.valueOf(MType));
-		request.setPrice(Double.valueOf(price));
+		if(!StringUtils.isEmpty(MType))
+			request.setMType(Integer.valueOf(MType));
+		if(!StringUtils.isEmpty(price))
+			request.setPrice(Double.valueOf(price));
 		request.setRefStuNo(refStuNo);
 		medicalTreatResponse = medicalTreatFacade.insert(request);
 		requestMap.put("medicalTreatResponse", medicalTreatResponse);

@@ -2,6 +2,8 @@ package com.action.student;
 
 import java.util.Map;
 
+import org.springframework.util.StringUtils;
+
 import com.facade.StudentFacade;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -32,7 +34,8 @@ public class UpdateStudentAction extends ActionSupport {
 				.getContext().get("request");
 		StudentResponse studentResponse;
 		StudentRequest request = new StudentRequest();
-		request.setAge(Integer.valueOf(age));
+		if(!StringUtils.isEmpty(age))
+			request.setAge(Integer.valueOf(age));
 		request.setBirthPlace(birthPlace);
 		request.setClassNo(classNo);
 		request.setName(name);

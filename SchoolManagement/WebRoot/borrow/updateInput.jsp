@@ -28,7 +28,7 @@
 <% String id = request.getParameter("id");
 	out.print("id"+id); %>
 <form action="updateBorrowAction.action" method="POST">
-	<input name="id" type="hidden" value="<%=request.getAttribute("id")%>">
+	<input name="id" type="hidden" value="<%=request.getParameter("id")%>">
     	书名：<input name="BName" type="text"><br> 类型：<select
 			name="BType" id="BType">
 			<option selected value="1">文艺</option>

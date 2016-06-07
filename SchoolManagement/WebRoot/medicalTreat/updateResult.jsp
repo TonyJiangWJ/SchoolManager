@@ -27,7 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body style="text-align:center">
 	<%
 		MedicalTreatResponse response2 = (MedicalTreatResponse) request
-				.getAttribute("mediaclTreatResponse");
+				.getAttribute("medicalTreatResponse");
 		if (response2.getResultCode().equals(ResultCodeDesc.SUCCESS)) {
 	%>
 	更新成功!
@@ -38,7 +38,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<%
 		}
 	%>
-	<a href="mediaclTreat/management.jsp">返回管理页面</a><br>
+	<a href="medicalTreat/management.jsp">返回管理页面</a><br>
     	<a href="javascript:history.back(-1)">返回上一页</a><br>
 	<a href="index.jsp">返回首页</a>
 </body>

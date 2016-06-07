@@ -76,7 +76,7 @@
 			<result name="SUCCESS">/class/searchResult.jsp</result>
 		</action>
 		<action name="updateClassAction" class="updateClassAction">
-			<result name="SUCCESS">/class/deleteResult.jsp</result>
+			<result name="SUCCESS">/class/updateResult.jsp</result>
 		</action>
 		
 		<action name="deleteMedicalTreatAction" class="deleteMedicalTreatAction">

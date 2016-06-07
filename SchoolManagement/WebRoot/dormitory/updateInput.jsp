@@ -23,8 +23,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body style="text-align:center">
- 	<form action="searchDormitoryAction.action" method="POST">
- 	<input name="id" type="hidden" value="<%=request.getAttribute("id") %>">
+ 	<form action="updateDormitoryAction.action" method="POST">
+ 	<input name="id" type="hidden" value="<%=request.getParameter("id") %>">
     	床号：<input name="bedNo" type="text"><br>
     	寝室号：<input name="dorNo" type="text"><br>
     	学号：<input name="refStuNo" type="text"><br>

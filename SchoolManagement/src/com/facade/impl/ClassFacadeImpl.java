@@ -2,8 +2,10 @@ package com.facade.impl;
 
 import java.util.List;
 
+import org.apache.catalina.connector.Request;
 import org.springframework.util.StringUtils;
 
+import com.alibaba.fastjson.JSON;
 import com.base.util.ResultCodeDesc;
 import com.base.util.ResultMessageDesc;
 import com.bean.MClass;
@@ -18,9 +20,10 @@ import com.service.ClassService;
  */
 public class ClassFacadeImpl implements ClassFacade {
 	private ClassService classService;
-
+	
 	@Override
 	public ClassResponse listAll() {
+		
 		ClassResponse response = new ClassResponse();
 		response.setResultMsg(ResultMessageDesc.ERROR);
 		response.setResultCode(ResultCodeDesc.ERROR);
@@ -43,6 +46,7 @@ public class ClassFacadeImpl implements ClassFacade {
 
 	@Override
 	public ClassResponse update(ClassRequest request) {
+		System.out.println("ClassFacadeImpl Request:"+JSON.toJSONString(request));
 		ClassResponse response = new ClassResponse();
 		response.setResultMsg(ResultMessageDesc.ERROR);
 		response.setResultCode(ResultCodeDesc.ERROR);
@@ -74,6 +78,7 @@ public class ClassFacadeImpl implements ClassFacade {
 	@Override
 	public ClassResponse insert(ClassRequest request) {
 		// TODO Auto-generated method stub
+		System.out.println("ClassFacadeImpl Request:"+JSON.toJSONString(request));
 		ClassResponse response = new ClassResponse();
 		response.setResultCode(ResultCodeDesc.ERROR);
 		response.setResultMsg(ResultMessageDesc.ERROR);
@@ -103,6 +108,7 @@ public class ClassFacadeImpl implements ClassFacade {
 
 	@Override
 	public ClassResponse delete(ClassRequest request) {
+		System.out.println("ClassFacadeImpl Request:"+JSON.toJSONString(request));
 		ClassResponse response = new ClassResponse();
 		response.setResultCode(ResultCodeDesc.ERROR);
 		response.setResultMsg(ResultMessageDesc.ERROR);
@@ -132,14 +138,17 @@ public class ClassFacadeImpl implements ClassFacade {
 
 	@Override
 	public ClassResponse find(ClassRequest request) {
+		System.out.println("ClassFacadeImpl Request:"+JSON.toJSONString(request));
 		ClassResponse response = new ClassResponse();
 		response.setResultMsg(ResultMessageDesc.ERROR);
 		response.setResultCode(ResultCodeDesc.ERROR);
 		
 		try {
 			MClass t = new MClass();
-			if(!StringUtils.isEmpty(request.getClassName()))
+			if(!StringUtils.isEmpty(request.getClassName())){
 				t.setClassName(request.getClassName());
+				System.out.println("lala caonima");
+			}
 			if(!StringUtils.isEmpty(request.getClassNo()))
 				t.setClassNo(request.getClassNo());
 			if(!StringUtils.isEmpty(request.getGrade()))

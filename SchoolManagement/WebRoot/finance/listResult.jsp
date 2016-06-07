@@ -31,7 +31,7 @@
 <body style="text-align:center">
 	<%
 		FinanceResponse response2 = (FinanceResponse) request
-				.getAttribute("borrowResponse");
+				.getAttribute("financeResponse");
 		if (response2.getResultCode().equals(ResultCodeDesc.SUCCESS)) {
 			List<Finance> result = response2.getResult();
 	%>

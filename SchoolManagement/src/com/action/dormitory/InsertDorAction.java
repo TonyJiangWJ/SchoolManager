@@ -2,6 +2,8 @@ package com.action.dormitory;
 
 import java.util.Map;
 
+import org.springframework.util.StringUtils;
+
 import com.bean.Dormitory;
 import com.facade.DormitoryFacade;
 import com.opensymphony.xwork2.ActionContext;
@@ -29,7 +31,8 @@ public class InsertDorAction extends ActionSupport{
 		request.setDorNo(dorNo);
 		request.setLocation(location);
 		request.setRefStuNo(refStuNo);
-		request.setSize(Integer.valueOf(size));
+		if(!StringUtils.isEmpty(size))
+			request.setSize(Integer.valueOf(size));
 		dormitoryResponse = dormitoryFacade.insert(request);
 		requestMap.put("dormitoryResponse", dormitoryResponse);
 		return"SUCCESS";

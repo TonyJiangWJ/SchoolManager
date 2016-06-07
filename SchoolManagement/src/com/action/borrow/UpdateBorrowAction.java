@@ -2,6 +2,8 @@ package com.action.borrow;
 
 import java.util.Map;
 
+import org.springframework.util.StringUtils;
+
 import com.facade.BorrowFacade;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -25,10 +27,13 @@ public class UpdateBorrowAction extends ActionSupport {
 		BorrowResponse borrowResponse;
 		BorrowRequest request = new BorrowRequest();
 		request.setBName(BName);
-		request.setBStatus(Integer.valueOf(BStatus));
-		request.setBType(Integer.valueOf(BType));
+		if(!StringUtils.isEmpty(BStatus))
+			request.setBStatus(Integer.valueOf(BStatus));
+		if(!StringUtils.isEmpty(BType))
+			request.setBType(Integer.valueOf(BType));
 		request.setRefStuNo(refStuNo);
-		request.setId(Integer.valueOf(id));
+		if(!StringUtils.isEmpty(id))
+			request.setId(Integer.valueOf(id));
 		borrowResponse = borrowFacade.update(request);
 		requestMap.put("borrowResponse", borrowResponse);
 		return"SUCCESS";

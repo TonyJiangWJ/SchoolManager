@@ -2,6 +2,8 @@ package com.action.mclass;
 
 import java.util.Map;
 
+import org.springframework.util.StringUtils;
+
 import com.bean.MClass;
 import com.facade.ClassFacade;
 import com.opensymphony.xwork2.ActionContext;
@@ -27,7 +29,8 @@ public class InsertClassAction extends ActionSupport{
 		request.setClassName(className);
 		request.setClassNo(classNo);
 		request.setGrade(grade);
-		request.setStudentNum(Integer.valueOf(studentNum));
+		if(!StringUtils.isEmpty(studentNum))
+			request.setStudentNum(Integer.valueOf(studentNum));
 		classResponse = classFacade.insert(request);
 		requestMap.put("classResponse", classResponse);
 		return"SUCCESS";

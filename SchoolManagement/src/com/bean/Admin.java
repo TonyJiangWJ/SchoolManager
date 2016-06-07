@@ -9,8 +9,6 @@ import com.base.entity.BaseEntity;
  */
 public class Admin  extends BaseEntity{
 
-
-
      /**
 	 * 
 	 */

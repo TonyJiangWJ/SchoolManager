@@ -14,13 +14,13 @@ import com.response.FinanceResponse;
  */
 public class DeleteFinanceAction  extends ActionSupport{
 	private FinanceFacade financeFacade;
-	private Integer id;
+	private String id;
 	@Override
 	public String execute() throws Exception {
 		Map<String, Object> requestMap = (Map<String, Object>) ActionContext.getContext().get("request");
 		FinanceResponse financeResponse;
 		FinanceRequest request = new FinanceRequest();
-		request.setId(id);
+		request.setId(Integer.valueOf(id));
 		financeResponse = financeFacade.delete(request);
 		requestMap.put("financeResponse", financeResponse);
 		return"SUCCESS";
@@ -34,12 +34,14 @@ public class DeleteFinanceAction  extends ActionSupport{
 		this.financeFacade = financeFacade;
 	}
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
+
+
 
 }

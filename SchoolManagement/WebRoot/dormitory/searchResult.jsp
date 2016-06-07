@@ -39,6 +39,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<td>学号</td>
 			<td>地址</td>
 			<td>创建时间</td>
+			<td>操作1</td>
+			<td>操作2</td>
 		</tr>
 		<%
 			for (int i = 0; i < result.size(); i++) {

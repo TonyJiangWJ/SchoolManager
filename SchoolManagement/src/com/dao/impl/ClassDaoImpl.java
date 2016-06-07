@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
 
+import com.alibaba.fastjson.JSON;
 import com.base.dao.impl.BaseDaoImpl;
 import com.bean.MClass;
 import com.dao.ClassDao;
@@ -34,6 +35,8 @@ public class ClassDaoImpl extends BaseDaoImpl<MClass> implements ClassDao{
 			dc.add(Restrictions.eq("grade", entity.getGrade()));
 		if(entity.getStudentNum()!=null)
 			dc.add(Restrictions.eq("studentNum", entity.getStudentNum()));
+		System.out.println("FIND:ENTITY"+JSON.toJSONString(entity));
+		System.out.println("FIND:DC"+JSON.toJSONString(dc));
 		return (List<MClass>) getHibernateTemplate().findByCriteria(dc);
 	}
 

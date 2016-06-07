@@ -2,6 +2,8 @@ package com.action.dormitory;
 
 import java.util.Map;
 
+import org.springframework.util.StringUtils;
+
 import com.facade.DormitoryFacade;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -14,13 +16,14 @@ import com.response.DormitoryResponse;
  */
 public class DeleteDorAction  extends ActionSupport{
 	private DormitoryFacade dormitoryFacade;
-	private Integer id;
+	private String id;
 	@Override
 	public String execute() throws Exception {
 		Map<String, Object> requestMap = (Map<String, Object>) ActionContext.getContext().get("request");
 		DormitoryResponse dormitoryResponse;
 		DormitoryRequest request = new DormitoryRequest();
-		request.setId(id);
+		if(!StringUtils.isEmpty(id))
+			request.setId(Integer.valueOf(id));
 		dormitoryResponse = dormitoryFacade.delete(request);
 		requestMap.put("dormitoryResponse", dormitoryResponse);
 		return"SUCCESS";
@@ -34,12 +37,14 @@ public class DeleteDorAction  extends ActionSupport{
 		this.dormitoryFacade = dormitoryFacade;
 	}
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
+
+
 
 }

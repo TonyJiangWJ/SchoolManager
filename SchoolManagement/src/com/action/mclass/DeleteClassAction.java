@@ -2,6 +2,8 @@ package com.action.mclass;
 
 import java.util.Map;
 
+import org.springframework.util.StringUtils;
+
 import com.facade.ClassFacade;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -13,33 +15,36 @@ import com.response.ClassResponse;
  *
  */
 public class DeleteClassAction  extends ActionSupport{
-	private ClassFacade mClassFacade;
-	private Integer id;
+	private ClassFacade classFacade;
+	private String id;
 	@Override
 	public String execute() throws Exception {
 		Map<String, Object> requestMap = (Map<String, Object>) ActionContext.getContext().get("request");
 		ClassResponse mClassResponse;
 		ClassRequest request = new ClassRequest();
-		request.setId(id);
-		mClassResponse = mClassFacade.delete(request);
-		requestMap.put("mClassResponse", mClassResponse);
+		if(!StringUtils.isEmpty(id))
+			request.setId(Integer.valueOf(id));
+		mClassResponse = classFacade.delete(request);
+		requestMap.put("classResponse", mClassResponse);
 		return"SUCCESS";
 	}
 
 	public ClassFacade getClassFacade() {
-		return mClassFacade;
+		return classFacade;
 	}
 
-	public void setClassFacade(ClassFacade mClassFacade) {
-		this.mClassFacade = mClassFacade;
+	public void setClassFacade(ClassFacade classFacade) {
+		this.classFacade = classFacade;
 	}
 
-	public Integer getId() {
+
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
+
 
 }

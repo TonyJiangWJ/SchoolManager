@@ -3,6 +3,8 @@ package com.action.borrow;
 import java.sql.Timestamp;
 import java.util.Map;
 
+import org.springframework.util.StringUtils;
+
 import com.bean.Borrow;
 import com.facade.BorrowFacade;
 import com.opensymphony.xwork2.ActionContext;
@@ -31,8 +33,10 @@ public class InsertBorrowAction extends ActionSupport {
 		BDate = new Timestamp(System.currentTimeMillis());
 		request.setBDate(BDate);
 		request.setBName(BName);
-		request.setBStatus(Integer.valueOf(BStatus));
-		request.setBType(Integer.valueOf(BType));
+		if(!StringUtils.isEmpty(BStatus))
+			request.setBStatus(Integer.valueOf(BStatus));
+		if(!StringUtils.isEmpty(BType))
+			request.setBType(Integer.valueOf(BType));
 		request.setRefStuNo(refStuNo);
 		borrowResponse = borrowFacade.insert(request);
 		requestMap.put("borrowResponse", borrowResponse);

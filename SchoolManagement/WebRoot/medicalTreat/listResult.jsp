@@ -52,8 +52,8 @@
 			<td><%=result.get(i).getPrice()%></td>
 			<td><%=result.get(i).getMType()%></td>
 			<td><a
-				href="borrow/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
-			<td><a href="deleteBorrowAction.action?id=<%=result.get(i).getId()%>">删除</a></td>
+				href="medicalTreat/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
+			<td><a href="deleteMedicalTreatAction.action?id=<%=result.get(i).getId()%>">删除</a></td>
 		</tr>
 		<%
 			}
@@ -65,7 +65,7 @@
 	失败：<%=response2.getResultMsg()%>
 	<%
 		}
-	%><a href="mediaclTreat/management.jsp">返回管理页面</a><br>
+	%><a href="medicalTreat/management.jsp">返回管理页面</a><br>
     	<a href="javascript:history.back(-1)">返回上一页</a><br>
 	<a href="index.jsp">返回首页</a>
 </body>

@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
  <body style="text-align:center">
-    <form action="insertBorrowAction.action" method="POST">
+    <form action="insertMedicalTreatAction.action" method="POST">
     	学号：<input name="refStuNo" type="text"><br>
 		价格：<input name="price" type="text"><br>
 		类型：<select name="MType">

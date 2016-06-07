@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
  <body style="text-align:center">
     <form action="updateFinanceAction.action" method="POST">
-    <input name="id" type="hidden" value="<%=request.getAttribute("id") %>">
+    <input name="id" type="hidden" value="<%=request.getParameter("id") %>">
     	学费：<input name="tuition" type="text"><br>
     	班费：<input name="classMoney" type="text"><br>
     	住宿费：<input name="houseFee" type="text"><br>

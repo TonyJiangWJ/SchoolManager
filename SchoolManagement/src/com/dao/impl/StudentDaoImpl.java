@@ -28,6 +28,8 @@ public class StudentDaoImpl extends BaseDaoImpl<Student> implements StudentDao{
 		DetachedCriteria dc = DetachedCriteria.forClass(Student.class);
 		if(entity.getAge()!=null)
 			dc.add(Restrictions.eq("age", entity.getAge()));
+		if(entity.getYear()!=null)
+			dc.add(Restrictions.eq("year", entity.getYear()));
 		if(entity.getBirthPlace()!=null)
 			dc.add(Restrictions.eq("brithPlace", entity.getBirthPlace()));
 		if(entity.getClassNo()!=null)

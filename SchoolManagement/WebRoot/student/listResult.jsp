@@ -61,8 +61,8 @@
 			<td><%=result.get(i).getStuNo() %></td>
 			<td><%=result.get(i).getSex() %></td>
 			<td><a
-				href="borrow/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
-			<td><a href="deleteBorrowAction.action?id=<%=result.get(i).getId()%>">删除</a></td>
+				href="student/updateInput.jsp?id=<%=result.get(i).getId()%>">更新</a></td>
+			<td><a href="deleteStudentAction.action?id=<%=result.get(i).getId()%>">删除</a></td>
 		</tr>
 		<%
 			}
@@ -75,7 +75,7 @@
 	<%
 		}
 	%>
-</body><br>
+</body><br><a href="student/management.jsp">返回管理页面</a><br>
     	<a href="javascript:history.back(-1)">返回上一页</a><br>
 	<a href="index.jsp">返回首页</a>
 </html>

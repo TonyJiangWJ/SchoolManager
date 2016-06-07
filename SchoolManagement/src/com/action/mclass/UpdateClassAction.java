@@ -2,6 +2,8 @@ package com.action.mclass;
 
 import java.util.Map;
 
+import org.springframework.util.StringUtils;
+
 import com.facade.ClassFacade;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -28,7 +30,8 @@ public class UpdateClassAction  extends ActionSupport {
 		request.setClassNo(classNo);
 		request.setGrade(grade);
 		request.setId(Integer.valueOf(id));
-		request.setStudentNum(Integer.valueOf(studentNum));
+		if(!StringUtils.isEmpty(studentNum))
+			request.setStudentNum(Integer.valueOf(studentNum));
 		classResponse = classFacade.update(request);
 		requestMap.put("classResponse", classResponse);
 		return"SUCCESS";

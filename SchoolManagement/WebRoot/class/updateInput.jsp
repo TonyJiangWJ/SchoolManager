@@ -24,7 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
 <body style="text-align:center">
 <form action="updateClassAction.action" method="POST">
-<input name="id" type="hidden" value="<%=request.getAttribute("id") %>">
+<input name="id" type="hidden" value="<%=request.getParameter("id")%>">
     	班级名称：<input name="className" type="text"><br>
     	班级号：<input name="classNo" type="text"><br>
     	年级：<select name="grade" id="grade" >
